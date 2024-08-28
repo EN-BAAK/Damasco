@@ -1,0 +1,18 @@
+#about {
+  p {
+    line-height: 1.8;
+
+    &.ar {
+      text-align: end;
+    }
+  }
+  .img-holder {
+    &.ar {
+      order: 6;
+    }
+
+    img {
+      @include prefixer(border-radius, 8px);
+    }
+  }
+}

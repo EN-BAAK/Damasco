@@ -1,0 +1,37 @@
+{
+  "global": {
+    "home": "accueil",
+    "contact": "contactez nous",
+    "brands": "marques",
+    "about": "à propos",
+    "services": "services",
+    "company": "Damasco",
+    "damasco": "Damasco"
+  },
+  "topBar": {
+    "time": "Du samedi au jeudi, de 8h à 22h",
+    "calling": "Appelez-nous : +963 954 439 592"
+  },
+  "hero": {
+    "welcome1": "Bienvenue chez",
+    "welcome2": "Société de fournitures médicales.",
+    "message1": "Tout ce dont les médecins et les patients ont besoin.",
+    "message2": "Orthèses médicales.",
+    "message3": "Instruments chirurgicaux.",
+    "message4": "Vêtements médicaux.",
+    "message5": "Dispositifs de mesure de la glycémie, de la pression artérielle et de l'oxygène."
+  },
+  "brands": {
+    "title": "Certaines marques avec lesquelles nous travaillons"
+  },
+  "contact": {
+    "form": {
+      "name": "Nom",
+      "mobile": "Numéro de téléphone (optionnel)",
+      "email": "Email",
+      "subject": "Sujet",
+      "message": "Message",
+      "confirm": "Envoyer"
+    }
+  }
+}

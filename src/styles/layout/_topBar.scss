@@ -1,0 +1,28 @@
+#topbar {
+  background-color: var(--c-main);
+  height: 40px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  font-weight: 600;
+  @include prefixer(transition, var(--time-transition));
+  z-index: 999;
+  p {
+    line-height: 40px;
+
+    &.pointer {
+      cursor: pointer;
+    }
+
+    svg {
+      margin: 0 5px 0 0;
+    }
+
+    svg.arabic {
+      margin: 0 0 0 5px;
+    }
+  }
+  &.scrolled {
+    top: -40px;
+  }
+}

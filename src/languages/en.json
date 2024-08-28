@@ -1,0 +1,38 @@
+{
+  "global": {
+    "home": "home",
+    "contact": "contact us",
+    "brands": "brands",
+    "about": "about",
+    "services": "services",
+    "company": "Damasco",
+    "about-us": "about us",
+    "damasco": "Damasco"
+  },
+  "topBar": {
+    "time": "Saturday-Thursday, 8AM to 10PM",
+    "calling": " Call Us: +963 954 439 592"
+  },
+  "hero": {
+    "welcome1": "Welcome to",
+    "welcome2": "Medical Supplies Company.",
+    "message1": "Everything needed for doctors and patients.",
+    "message2": "Medical braces.",
+    "message3": "Surgical instruments.",
+    "message4": "Medical clothing.",
+    "message5": "Blood sugar, pressure, and oxygen measurement devices."
+  },
+  "brands": {
+    "title": "Some of the Brands We Work With"
+  },
+  "contact": {
+    "form": {
+      "name": "Name",
+      "mobile": "Mobile Number (optional)",
+      "email": "Email",
+      "subject": "Subject",
+      "message": "Message",
+       "confirm": "Send"
+    }
+  }
+}

@@ -1,0 +1,21 @@
+#brands {
+  .container {
+    .row {
+      align-items: center;
+      > div {
+        img {
+          width: 100%;
+          height: auto;
+          @include prefixer(transition, var(--time-transition));
+
+          @include breakpoints(md) {
+            @include prefixer(filter, grayscale(0.75));
+            &:hover {
+              @include prefixer(filter, grayscale(0));
+            }
+          }
+        }
+      }
+    }
+  }
+}
