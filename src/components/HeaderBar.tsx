@@ -8,6 +8,7 @@ const HeaderBar = (): React.JSX.Element => {
 
   const { t: translating, i18n } = useTranslation("global");
 
+  console.log("render")
   return (
     <header id='header'>
       <Container className={`d-flex align-items-center pt-3 pb-3`}>
@@ -15,7 +16,7 @@ const HeaderBar = (): React.JSX.Element => {
           {translating("global.damasco")}
         </div>
 
-        <Navbar className='order-md-0 order-last position-static'>
+        <Navbar className='order-md-0 order-last position-static pe-md-4'>
           <ul className={`m-0 p-0 ${active && "active"}`}>
             <li>
               <a className='active text-uppercase' href='#hero'>

@@ -24,6 +24,12 @@
   "brands": {
     "title": "Certaines marques avec lesquelles nous travaillons"
   },
+  "about": {
+    "paragraph1": "La société Damascus, fondée en 2011, est une entreprise de premier plan dans le domaine des fournitures médicales, tirant son nom de la grandeur ancienne de la ville de Damas. Damascus cherche à répondre aux besoins des médecins et des patients en offrant une large gamme de produits de haute qualité. Sous la devise",
+    "paragraph2": "nous nous engageons à fournir les dernières technologies médicales et les fournitures essentielles qui contribuent à améliorer les soins de santé et à rehausser l'expérience de traitement.",
+    "sentence": "'Tout ce dont le médecin et le patient ont besoin'",
+    "paragraph3": "La société Damascus se distingue par ses prix compétitifs, en faisant le choix optimal pour les clients recherchant la qualité à un coût raisonnable. De plus, l'entreprise accorde une attention particulière à tous les besoins de soins médicaux des patients à domicile, garantissant le confort et la sécurité des patients en dehors des hôpitaux."
+  },
   "contact": {
     "form": {
       "name": "Nom",

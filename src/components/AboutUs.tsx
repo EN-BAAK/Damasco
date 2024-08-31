@@ -16,21 +16,26 @@ const AboutUs = (): React.JSX.Element => {
       />
 
       <Container>
-        <Row className='align-items-center'>
+        <Row className={`align-items-center ${arStyle}`}>
           <div
             className={`img-holder col-lg-6 col-12 ${arStyle}`}
             data-ani={isArabic ? "left" : "right"}
           >
             <img src={AboutImg} className='img-fluid' />
           </div>
-          <p
+          <div
             className={`col-lg-6 col-12 m-0 ${arStyle}`}
             data-ani={isArabic ? "right" : "left"}
           >
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus error sit deleniti in libero, itaque culpa earum? Quaerat ratione laboriosam omnis perspiciatis ea. Quasi minus nisi odio repellat nam, vitae facilis impedit cum libero modi corrupti magni ipsum natus voluptates qui quas iste, necessitatibus nemo. Nostrum ea molestiae harum id!
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus error sit deleniti in libero, itaque culpa earum? Quaerat ratione laboriosam omnis perspiciatis ea. Quasi minus nisi odio repellat nam, vitae facilis impedit cum libero modi corrupti magni ipsum natus voluptates qui quas iste, necessitatibus nemo. Nostrum ea molestiae harum id!
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus error sit deleniti in libero, itaque culpa earum? Quaerat ratione laboriosam omnis perspiciatis ea. Quasi minus nisi odio repellat nam, vitae facilis impedit cum libero modi corrupti magni ipsum natus voluptates qui quas iste, necessitatibus nemo. Nostrum ea molestiae harum id!
-          </p>
+            <p className={`${arStyle}`}>
+              {translating("about.paragraph1")}
+              <span className='sentence'>{translating("about.sentence")}</span>
+              {translating("about.paragraph2")}
+            </p>
+            <p className={`${arStyle}`}>
+              {translating("about.paragraph3")}
+            </p>
+          </div>
         </Row>
       </Container>
     </section>

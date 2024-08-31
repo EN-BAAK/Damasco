@@ -25,6 +25,12 @@
   "brands": {
     "title": "Some of the Brands We Work With"
   },
+  "about": {
+    "paragraph1": "Damascus Company, founded in 2011, is a leading company in the field of medical supplies, deriving its name from the ancient grandeur of the city of Damascus. Damascus seeks to meet the needs of both doctors and patients by offering a wide range of high-quality products. Under the motto,",
+    "paragraph2": "we are committed to providing the latest medical technologies and essential supplies that contribute to improving healthcare and enhancing the treatment experience.",
+    "sentence": "'Everything needed for the doctor and the patient'",
+    "paragraph3": "Damascus Company stands out for its competitive prices, making it the optimal choice for customers seeking quality at a reasonable cost. Additionally, the company pays special attention to all the medical care needs for patients at home, ensuring the comfort and safety of patients outside of hospitals."
+  },
   "contact": {
     "form": {
       "name": "Name",
@@ -32,7 +38,7 @@
       "email": "Email",
       "subject": "Subject",
       "message": "Message",
-       "confirm": "Send"
+      "confirm": "Send"
     }
   }
 }
