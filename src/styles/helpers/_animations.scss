@@ -16,10 +16,9 @@
     @include opacity(1);
   }
 }
-@include keyf("up-big") {
+@include keyf("popup-up") {
   from {
-    @include prefixer(transform, translateY(200px) scale(0));
-    @include opacity(0);
+    @include prefixer(transform, translateY(200px) scale(0.1));
   }
   to {
     @include prefixer(transform, translateY(0) scale(1));

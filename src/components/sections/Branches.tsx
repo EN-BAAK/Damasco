@@ -33,7 +33,7 @@ const Branches = (): React.JSX.Element => {
           </div>
         </div>
 
-        <div className="window" data-ani="up-big">
+        <div className="window" data-ani="popup-up">
           <h1 className="fw-bold">{translating(`branches.branch${selectedBranchIndex + 1}.title`)}</h1>
           <p className="fs-5 fw-normal">{translating(`branches.branch${selectedBranchIndex + 1}.address`)}</p>
           <div className="map-icon-holder">

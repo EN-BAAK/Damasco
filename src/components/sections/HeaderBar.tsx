@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Container, Navbar } from 'react-bootstrap';
 import { useTranslation } from 'react-i18next';
 import LanguageBox from '../LanguageBox';
@@ -7,6 +7,16 @@ const HeaderBar = (): React.JSX.Element => {
   const [active, setActive] = useState<boolean>(false)
 
   const { t: translating, i18n } = useTranslation("global");
+
+  useEffect(() => {
+    const links: NodeListOf<HTMLLIElement> | null = document.querySelectorAll("#header ul li");
+
+    if (links) {
+      links.forEach((e: HTMLLIElement) => {
+        e.onclick = () => setActive(false);
+      });
+    }
+  }, []);
 
   return (
     <header id='header'>
