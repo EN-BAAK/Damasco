@@ -6,40 +6,48 @@
     height: 400px;
 
     .branches {
-      margin: 0 auto 0 0;
+      margin: 0 auto;
       border: inherit;
       border-left: none;
       border-top: none;
       border-bottom-right-radius: inherit;
       overflow: hidden;
+      display: flex;
+      justify-content: center;
+      gap: 10px;
 
       h5 {
         background-color: var(--c-white-shadow);
-        max-width: 20px;
-        padding: 2px 0 0;
+        padding: 10px 20px;
         margin: 0;
         overflow: hidden;
         text-transform: capitalize;
         white-space: nowrap;
         font-weight: 500;
         font-size: 20px;
-        @include prefixer(transition, var(--time-long) all);
+        transition: var(--time-long) all;
         cursor: pointer;
+        border-radius: 5px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+        &:hover {
+          background-color: var(--c-main-light);
+          color: var(--c-white-main);
+        }
 
         &.active {
           background-color: var(--c-main);
-          max-width: 1000px;
-          padding: 2px 8px 0;
           color: var(--c-white-main);
+          font-weight: bold;
         }
       }
 
-      & h5:not(:last-child) {
+      h5:not(:last-child) {
         border-right: inherit;
       }
 
       &.ar {
-        margin: 0 0 0 auto;
+        margin: 0 auto;
         border-bottom-right-radius: 0;
         border-bottom-left-radius: inherit;
 
@@ -49,6 +57,10 @@
         }
       }
     }
+  }
+
+  .window {
+    animation: up-big 0.5s ease-in-out;
   }
 
   .window {

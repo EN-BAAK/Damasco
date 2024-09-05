@@ -114,6 +114,11 @@
 
     img {
       width: 450px;
+      @include breakpoints(#{$xxs}) {
+        margin-top: 65px;
+        width: 380px;
+      }
+
       @include breakpoints(lg) {
         width: 500px;
         @include animation(floating, 3.5s linear infinite);
