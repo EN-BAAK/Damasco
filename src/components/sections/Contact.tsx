@@ -1,5 +1,5 @@
-import React, { useState } from 'react'
-import HeadingTitle from './HeadingTitle'
+import React, { useState } from 'react';
+import HeadingTitle from '../HeadingTitle';
 import { Form, Button, Col } from 'react-bootstrap';
 import { useTranslation } from 'react-i18next';
 
@@ -13,8 +13,8 @@ const Contact = (): React.JSX.Element => {
   });
 
   const { t: translating, i18n } = useTranslation("global");
-  const arStyle = i18n.language === "ar" ? "ar" : "en"
-  const isArabic = i18n.language === "ar"
+  const arStyle = i18n.language === "ar" ? "ar" : "en";
+  const isArabic = i18n.language === "ar";
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = event.target;
@@ -26,16 +26,9 @@ const Contact = (): React.JSX.Element => {
 
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    console.log(formData);
-    setFormData({
-      name: '',
-      mobile: '',
-      email: '',
-      subject: '',
-      message: ''
-    });
-  };
 
+
+  };
   return (
     <section id='contact' className={arStyle}>
       <HeadingTitle
@@ -61,7 +54,7 @@ const Contact = (): React.JSX.Element => {
             <Form.Control
               type="text"
               name="mobile"
-              pattern="\+[0-9]+"
+              // pattern="\+[0-9]+"
               placeholder={translating("contact.form.mobile")}
               value={formData.mobile}
               onChange={handleChange}

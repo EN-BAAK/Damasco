@@ -13,9 +13,16 @@
 @import "./styles/layout/topBar";
 
 /* Components */
-@import "./styles/components/headingTitle";
-@import "./styles/components/languageBox";
 @import "./styles/components/hero";
 @import "./styles/components/aboutUs";
 @import "./styles/components/brands";
 @import "./styles/components/contact";
+@import "./styles/components/services";
+@import "./styles/components/branches";
+
+@import "./styles/components/cta";
+@import "./styles/components/languageBox";
+
+@import "./styles/components/button";
+@import "./styles/components/headingTitle";
+@import "./styles/components/productsCard";

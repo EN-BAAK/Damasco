@@ -1,7 +1,7 @@
 import React from 'react'
 import { useTranslation } from 'react-i18next';
 import { FaMobileScreenButton } from "react-icons/fa6";
-import { phone } from '../misc/global';
+import { phone } from '../../misc/global';
 
 const TopBar = (): React.JSX.Element => {
   const { t: translating, i18n } = useTranslation("global");
@@ -14,9 +14,9 @@ const TopBar = (): React.JSX.Element => {
   return (
     <div id="topbar" className=" w-100">
       <div
-        className={`container d-flex justify-content-center justify-content-md-between`}
+        className={`container d-flex justify-content-between text-nowrap`}
       >
-        <p className="text-white d-none d-md-block">
+        <p className="text-white d-md-block">
           <i className="fa-regular fa-clock"></i>
           {translating("topBar.time")}
         </p>
@@ -25,7 +25,7 @@ const TopBar = (): React.JSX.Element => {
           onClick={handleCall}
         >
           <FaMobileScreenButton className={language === "ar" ? "arabic" : ""} />
-          {translating("topBar.calling")}
+          <span>{translating("topBar.calling")}</span>
         </p>
       </div>
     </div>

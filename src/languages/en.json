@@ -5,6 +5,7 @@
     "brands": "brands",
     "about": "about",
     "services": "services",
+    "branches": "branches",
     "company": "Damasco",
     "about-us": "about us",
     "damasco": "Damasco"
@@ -23,13 +24,28 @@
     "message5": "Blood sugar, pressure, and oxygen measurement devices."
   },
   "brands": {
-    "title": "Some of the Brands We Work With"
+    "title": "We offer medical products for the most famous international companies that are considered pioneers in their field"
   },
   "about": {
     "paragraph1": "Damascus Company, founded in 2011, is a leading company in the field of medical supplies, deriving its name from the ancient grandeur of the city of Damascus. Damascus seeks to meet the needs of both doctors and patients by offering a wide range of high-quality products. Under the motto,",
     "paragraph2": "we are committed to providing the latest medical technologies and essential supplies that contribute to improving healthcare and enhancing the treatment experience.",
     "sentence": "'Everything needed for the doctor and the patient'",
     "paragraph3": "Damascus Company stands out for its competitive prices, making it the optimal choice for customers seeking quality at a reasonable cost. Additionally, the company pays special attention to all the medical care needs for patients at home, ensuring the comfort and safety of patients outside of hospitals."
+  },
+  "cta": {
+    "title": "Damasco prides itself on having multiple branches within Damascus, ensuring the reach of its services and products to the largest possible number of customers in the region. Whether you are a doctor looking for precise tools and innovative medical devices, or a patient in need of reliable medical supplies for daily use, Damasco is the perfect partner for you. We are here to support you every step of the way on the path of comprehensive healthcare",
+    "btn": "Explore more"
+  },
+  "services": {
+    "desc": "We offer a diverse range of essential products for medical professionals in surgical procedures and examinations, in addition to providing all the necessary equipment and tools for nurses and patients"
+  },
+  "branches": {
+    "desc": "We have multiple branches in various areas within the capital Damascus to ensure everything that concerns the doctor and the patient anywhere and at any time",
+    "branch1": "Mazah, Moasah, in front of 'Nabel Nafesah' sweet market",
+    "branch2": "Mazah, Moasah, by children hospital",
+    "branch3": "Mazah, Moasah, by Moasah hospital",
+    "branch4": "Mazah, she5 saaed, after 'Molok al shawrma'",
+    "branch5": "Mazah 'asad jamiae'"
   },
   "contact": {
     "form": {

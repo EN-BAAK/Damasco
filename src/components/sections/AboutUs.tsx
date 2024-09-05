@@ -1,8 +1,8 @@
 import React from 'react'
-import HeadingTitle from './HeadingTitle'
+import HeadingTitle from '../HeadingTitle'
 import { useTranslation } from 'react-i18next';
 import { Container, Row } from 'react-bootstrap';
-import AboutImg from "../assets/about.jpg"
+import AboutImg from "../../assets/about.jpg"
 
 const AboutUs = (): React.JSX.Element => {
   const { t: translating, i18n } = useTranslation("global");
@@ -11,11 +11,11 @@ const AboutUs = (): React.JSX.Element => {
 
   return (
     <section id='about'>
-      <HeadingTitle
-        title={translating("global.about-us")}
-      />
-
       <Container>
+        <HeadingTitle
+          title={translating("global.about-us")}
+        />
+
         <Row className={`align-items-center ${arStyle}`}>
           <div
             className={`img-holder col-lg-6 col-12 ${arStyle}`}

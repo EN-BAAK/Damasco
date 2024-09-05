@@ -1,5 +1,3 @@
-const windowHeight = window.innerHeight;
-
 export const setItemToLocalStorage = (
   key: string,
   value: string | number | object
@@ -16,36 +14,48 @@ export const getItemFromLocalStorage = (key: string) => {
   return JSON.parse(json);
 };
 
-export const highlightActiveLink = (
-  navLinks: HTMLAnchorElement[],
-  activeLink: string | null | undefined
-) => {
-  if (!activeLink) return;
+export const highlightActiveLink = (navLinks: HTMLAnchorElement[]) => {
+  const halfViewport = window.innerHeight / 2;
+  const sections = Array.from(
+    document.querySelectorAll<HTMLElement>("section")
+  );
 
-  const sections = document.querySelectorAll<HTMLElement>("section");
   sections.forEach((section) => {
-    const rect = section.getBoundingClientRect();
-    if (rect.top <= windowHeight / 2 && rect.bottom >= windowHeight / 2) {
-      const sectionID = section.id;
+    const { top, bottom } = section.getBoundingClientRect();
+    const isHalfVisible = top <= halfViewport && bottom >= halfViewport;
+
+    if (isHalfVisible) {
+      const id = section.id;
       const activeLinkElement = document.querySelector<HTMLAnchorElement>(
-        `nav a[href="#${sectionID}"]`
+        `nav a[href="#${id}"]`
       );
-      navLinks.forEach((link) => link.classList.remove("active"));
-      activeLinkElement?.parentElement?.classList.add("active");
+
+      if (activeLinkElement) {
+        navLinks.forEach((link) => link.classList.remove("active"));
+        activeLinkElement.classList.add("active");
+        return;
+      }
     }
   });
 };
 
 export const setAnimation = () => {
   const reveals = document.querySelectorAll<HTMLElement>("*[data-ani]");
-  reveals.forEach((revealElement) => {
-    const elementTop = revealElement.getBoundingClientRect().top;
-    if (elementTop < windowHeight) {
-      const animation = revealElement.getAttribute("data-ani");
-      revealElement.removeAttribute("data-ani");
-      revealElement.style.animation = `${animation} 1s .3s linear forwards`;
 
-      // setTimeout(() => {}, 300);
-    }
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        const revealElement = entry.target as HTMLElement;
+        const animation = revealElement.getAttribute("data-ani");
+
+        revealElement.style.animation = `${animation} 1s .3s linear forwards`;
+
+        observer.unobserve(revealElement);
+      }
+    });
+  });
+
+  reveals.forEach((revealElement) => {
+    observer.observe(revealElement);
   });
 };

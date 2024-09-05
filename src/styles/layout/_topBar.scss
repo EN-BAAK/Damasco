@@ -5,8 +5,18 @@
   top: 0;
   left: 0;
   font-weight: 600;
+  font-size: 12px;
   @include prefixer(transition, var(--time-transition));
   z-index: 999;
+
+  @include breakpoints(sm) {
+    font-size: 14px;
+  }
+
+  @include breakpoints(md) {
+    font-size: 18px;
+  }
+
   p {
     line-height: 40px;
 
@@ -20,6 +30,10 @@
 
     svg.arabic {
       margin: 0 0 0 5px;
+    }
+
+    span {
+      direction: ltr;
     }
   }
   &.scrolled {

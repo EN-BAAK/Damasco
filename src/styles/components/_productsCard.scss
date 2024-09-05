@@ -1,0 +1,20 @@
+.products-card {
+  box-shadow: 1px 1px 15px 0 var(--c-white-shadow);
+  overflow: hidden;
+
+  .card-img-top {
+    height: 200px;
+    position: relative;
+
+    &::after {
+      content: "";
+      background-color: rgba(0, 0, 0, 0.466);
+      position: absolute;
+      @include set-position(0, 0, 0, 0);
+    }
+
+    img {
+      @include same-scale(100%);
+    }
+  }
+}

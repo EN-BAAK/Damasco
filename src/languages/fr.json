@@ -1,10 +1,11 @@
 {
   "global": {
     "home": "accueil",
-    "contact": "contactez nous",
+    "contact": "contactez",
     "brands": "marques",
     "about": "à propos",
     "services": "services",
+    "branches": "branches",
     "company": "Damasco",
     "damasco": "Damasco"
   },
@@ -23,6 +24,9 @@
   },
   "brands": {
     "title": "Certaines marques avec lesquelles nous travaillons"
+  },
+  "cta": {
+    "title": "Damasco se vante d'avoir plusieurs succursales à l'intérieur de Damas, garantissant ainsi la portée de ses services et de ses produits au plus grand nombre possible de clients dans la région. Que vous soyez un médecin à la recherche d'outils précis et de dispositifs médicaux innovants, ou un patient ayant besoin de fournitures médicales fiables pour un usage quotidien, Damasco est le partenaire idéal pour vous. Nous sommes là pour vous soutenir à chaque étape sur le chemin des soins de santé complets."
   },
   "about": {
     "paragraph1": "La société Damascus, fondée en 2011, est une entreprise de premier plan dans le domaine des fournitures médicales, tirant son nom de la grandeur ancienne de la ville de Damas. Damascus cherche à répondre aux besoins des médecins et des patients en offrant une large gamme de produits de haute qualité. Sous la devise",

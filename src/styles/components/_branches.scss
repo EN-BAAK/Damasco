@@ -1,0 +1,106 @@
+#branches {
+  .card {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+
+    .branches {
+      margin: 0 auto 0 0;
+      border: inherit;
+      border-left: none;
+      border-top: none;
+      border-bottom-right-radius: inherit;
+      overflow: hidden;
+
+      h5 {
+        background-color: var(--c-white-shadow);
+        max-width: 20px;
+        padding: 2px 0 0;
+        margin: 0;
+        overflow: hidden;
+        text-transform: capitalize;
+        white-space: nowrap;
+        font-weight: 500;
+        font-size: 20px;
+        @include prefixer(transition, var(--time-long) all);
+        cursor: pointer;
+
+        &.active {
+          background-color: var(--c-main);
+          max-width: 1000px;
+          padding: 2px 8px 0;
+          color: var(--c-white-main);
+        }
+      }
+
+      & h5:not(:last-child) {
+        border-right: inherit;
+      }
+
+      &.ar {
+        margin: 0 0 0 auto;
+        border-bottom-right-radius: 0;
+        border-bottom-left-radius: inherit;
+
+        h5 {
+          border-left: 1px solid var(--c-white-shadow);
+          border-right: 0;
+        }
+      }
+    }
+  }
+
+  .window {
+    background-color: var(--c-white-95);
+    width: 450px;
+    margin: -300px auto 0;
+    padding: 25px 45px;
+    position: relative;
+    text-align: center;
+
+    @include breakpoints(xs) {
+      width: calc(100% - 20px);
+      padding: 20px 15px;
+    }
+
+    @include breakpoints(sm) {
+      width: 450px;
+      padding: 20px 15px;
+    }
+
+    @include breakpoints(md) {
+      margin-top: -175px;
+      width: calc(100% - 100px);
+    }
+
+    @include breakpoints(md) {
+      margin-top: -175px;
+      width: calc(100% - 200px);
+    }
+
+    &::before {
+      content: "";
+      background-color: var(--c-main);
+      height: 5px;
+      position: absolute;
+      @include set-position(0, 0, auto, 0);
+    }
+
+    .map-icon-holder {
+      background-color: var(--c-main);
+      @include same-scale(75px);
+      margin: 20px auto 0;
+      @include prefixer(border-radius, 50%);
+      @include centering;
+      font-size: 35px;
+      color: var(--c-white-main);
+      @include prefixer(transition, var(--time-transition));
+      cursor: pointer;
+
+      &:hover {
+        background-color: var(--c-main-shadow);
+      }
+    }
+  }
+}

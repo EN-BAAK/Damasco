@@ -1,6 +1,6 @@
 import React from 'react'
 import { Container, Row } from 'react-bootstrap'
-import Logo from "../assets/logo.png"
+import Logo from "../../assets/logo.png"
 import { useTranslation } from 'react-i18next';
 import Typewriter from "typewriter-effect";
 
