@@ -6,7 +6,6 @@ import Typewriter from "typewriter-effect";
 
 const Hero = (): React.JSX.Element => {
   const { t: translating, i18n } = useTranslation("global");
-  // const language = i18n.language === 'ar' ? "ar" : "en";
   const isArabic = i18n.language === "ar"
 
   return (
@@ -19,7 +18,7 @@ const Hero = (): React.JSX.Element => {
           >
             <div>
               <h1>{translating("hero.welcome1")} <span>{translating("global.company")}</span> {translating("hero.welcome2")}</h1>
-              <p id='sub-title'>
+              <div id='sub-title'>
                 <Typewriter
                   options={{
                     strings: [translating("hero.message1"),
@@ -31,7 +30,7 @@ const Hero = (): React.JSX.Element => {
                     loop: true,
                   }}
                 />
-              </p>
+              </div>
             </div>
           </div>
           <div

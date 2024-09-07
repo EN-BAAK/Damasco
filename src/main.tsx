@@ -7,6 +7,7 @@ import { I18nextProvider } from 'react-i18next'
 import arLang from "./languages/ar.json"
 import enLang from "./languages/en.json"
 import frLang from "./languages/fr.json"
+import { StrictMode } from 'react'
 
 i18next.init({
   interpolation: { escapeValue: false },
@@ -25,8 +26,9 @@ i18next.init({
 })
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
-  <I18nextProvider i18n={i18next}>
-    <App />
-  </I18nextProvider>
-
+  <StrictMode>
+    <I18nextProvider i18n={i18next}>
+      <App />
+    </I18nextProvider>
+  </StrictMode>
 )

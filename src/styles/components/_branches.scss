@@ -1,70 +1,70 @@
 #branches {
+  .branches {
+    margin: 15px auto;
+    padding-top: 15px;
+    border-bottom-right-radius: inherit;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+
+    h5 {
+      background-color: var(--c-white-shadow);
+      padding: 2px 3px;
+      margin: 0;
+      @include prefixer(border-radius, 5px);
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      text-transform: capitalize;
+      white-space: nowrap;
+      font-weight: 500;
+      font-size: 11px;
+      cursor: pointer;
+      @include prefixer(transition, var(--time-transition));
+
+      @include breakpoints(sm) {
+        padding: 2px 6px;
+        font-size: 14px;
+      }
+
+      @include breakpoints(lg) {
+        padding: 10px 20px;
+        font-size: 20px;
+      }
+
+      &:hover {
+        background-color: var(--c-main-transparent);
+        color: var(--c-white-main);
+      }
+
+      &.active {
+        background-color: var(--c-main);
+        color: var(--c-white-main);
+        font-weight: bold;
+      }
+    }
+
+    h5:not(:last-child) {
+      border-right: inherit;
+    }
+
+    &.ar {
+      margin: 15px auto;
+      border-bottom-right-radius: 0;
+      border-bottom-left-radius: inherit;
+
+      h5 {
+        border-left: 1px solid var(--c-white-shadow);
+        border-right: 0;
+      }
+    }
+  }
+
   .card {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     height: 400px;
-
-    .branches {
-      margin: 0 auto;
-      padding-top: 15px;
-      border-bottom-right-radius: inherit;
-      overflow: hidden;
-      display: flex;
-      justify-content: center;
-      gap: 10px;
-
-      h5 {
-        background-color: var(--c-white-shadow);
-        padding: 2px 3px;
-        margin: 0;
-        @include prefixer(border-radius, 5px);
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        overflow: hidden;
-        text-transform: capitalize;
-        white-space: nowrap;
-        font-weight: 500;
-        font-size: 11px;
-        cursor: pointer;
-        @include prefixer(transition, var(--time-transition));
-
-        @include breakpoints(sm) {
-          padding: 2px 6px;
-          font-size: 14px;
-        }
-
-        @include breakpoints(lg) {
-          padding: 10px 20px;
-          font-size: 20px;
-        }
-
-        &:hover {
-          background-color: var(--c-main-transparent);
-          color: var(--c-white-main);
-        }
-
-        &.active {
-          background-color: var(--c-main);
-          color: var(--c-white-main);
-          font-weight: bold;
-        }
-      }
-
-      h5:not(:last-child) {
-        border-right: inherit;
-      }
-
-      &.ar {
-        margin: 0 auto;
-        border-bottom-right-radius: 0;
-        border-bottom-left-radius: inherit;
-
-        h5 {
-          border-left: 1px solid var(--c-white-shadow);
-          border-right: 0;
-        }
-      }
-    }
   }
 
   .window {
@@ -90,11 +90,10 @@
     }
 
     @include breakpoints(md) {
-      margin-top: -175px;
       width: calc(100% - 100px);
     }
 
-    @include breakpoints(md) {
+    @include breakpoints(lg) {
       margin-top: -175px;
       width: calc(100% - 200px);
     }
@@ -109,18 +108,24 @@
 
     .map-icon-holder {
       background-color: var(--c-main);
-      @include same-scale(75px);
-      margin: 20px auto 0;
-      @include prefixer(border-radius, 50%);
-      @include centering;
-      font-size: 35px;
-      color: var(--c-white-main);
-      @include prefixer(transition, var(--time-transition));
+      width: fit-content;
       cursor: pointer;
+      @include prefixer(transition, var(--time-transition));
 
       &:hover {
-        background-color: var(--c-main-shadow);
+        background-color: var(--c-main-transparent);
       }
+      // @include same-scale(75px);
+      // margin: 20px auto 0;
+      // @include prefixer(border-radius, 50%);
+      // @include centering;
+      // font-size: 35px;
+      // color: var(--c-white-main);
+      // cursor: pointer;
+
+      // &:hover {
+      //   background-color: var(--c-main-shadow);
+      // }
     }
   }
 }

@@ -48,7 +48,7 @@ const App = (): React.JSX.Element => {
       }
     };
 
-    handleScroll(); // Initial call
+    handleScroll();
 
     window.addEventListener("scroll", handleScroll);
 
