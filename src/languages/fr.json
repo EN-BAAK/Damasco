@@ -7,6 +7,7 @@
     "services": "services",
     "branches": "branches",
     "company": "Damasco",
+    "about-us": "à propos de nous",
     "damasco": "Damasco"
   },
   "topBar": {
@@ -23,10 +24,7 @@
     "message5": "Dispositifs de mesure de la glycémie, de la pression artérielle et de l'oxygène."
   },
   "brands": {
-    "title": "Certaines marques avec lesquelles nous travaillons"
-  },
-  "cta": {
-    "title": "Damasco se vante d'avoir plusieurs succursales à l'intérieur de Damas, garantissant ainsi la portée de ses services et de ses produits au plus grand nombre possible de clients dans la région. Que vous soyez un médecin à la recherche d'outils précis et de dispositifs médicaux innovants, ou un patient ayant besoin de fournitures médicales fiables pour un usage quotidien, Damasco est le partenaire idéal pour vous. Nous sommes là pour vous soutenir à chaque étape sur le chemin des soins de santé complets."
+    "title": "Nous proposons des produits médicaux des sociétés internationales les plus célèbres qui sont considérées comme des pionnières dans leur domaine"
   },
   "about": {
     "paragraph1": "La société Damascus, fondée en 2011, est une entreprise de premier plan dans le domaine des fournitures médicales, tirant son nom de la grandeur ancienne de la ville de Damas. Damascus cherche à répondre aux besoins des médecins et des patients en offrant une large gamme de produits de haute qualité. Sous la devise",
@@ -34,11 +32,26 @@
     "sentence": "'Tout ce dont le médecin et le patient ont besoin'",
     "paragraph3": "La société Damascus se distingue par ses prix compétitifs, en faisant le choix optimal pour les clients recherchant la qualité à un coût raisonnable. De plus, l'entreprise accorde une attention particulière à tous les besoins de soins médicaux des patients à domicile, garantissant le confort et la sécurité des patients en dehors des hôpitaux."
   },
+  "cta": {
+    "title": "Damasco est fier d'avoir plusieurs succursales à Damas, garantissant la portée de ses services et produits au plus grand nombre possible de clients de la région. Que vous soyez un médecin à la recherche d'outils précis et d'appareils médicaux innovants, ou un patient ayant besoin de fournitures médicales fiables pour un usage quotidien, Damasco est le partenaire idéal pour vous. Nous sommes là pour vous soutenir à chaque étape sur le chemin d'une santé globale",
+    "btn": "Explorer plus"
+  },
+  "services": {
+    "desc": "Nous offrons une gamme diversifiée de produits essentiels pour les professionnels de la santé dans les procédures chirurgicales et les examens, en plus de fournir tout l'équipement et les outils nécessaires pour les infirmières et les patients"
+  },
+  "branches": {
+    "desc": "Nous avons plusieurs succursales dans diverses zones de la capitale Damas pour garantir tout ce qui concerne le médecin et le patient, n'importe où et à tout moment",
+    "branch1": "Mazah, Moasah, en face du marché sucré 'Nabel Nafesah'",
+    "branch2": "Mazah, Moasah, près de l'hôpital pour enfants",
+    "branch3": "Mazah, Moasah, près de l'hôpital Moasah",
+    "branch4": "Mazah, she5 saaed, après 'Molok al shawrma'",
+    "branch5": "Mazah 'asad jamiae'"
+  },
   "contact": {
     "form": {
       "name": "Nom",
-      "mobile": "Numéro de téléphone (optionnel)",
-      "email": "Email",
+      "mobile": "Numéro de portable (facultatif)",
+      "email": "E-mail",
       "subject": "Sujet",
       "message": "Message",
       "confirm": "Envoyer"

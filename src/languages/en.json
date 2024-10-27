@@ -8,7 +8,8 @@
     "branches": "branches",
     "company": "Damasco",
     "about-us": "about us",
-    "damasco": "Damasco"
+    "damasco": "Damasco",
+    "cmore": "Voir plus"
   },
   "topBar": {
     "time": "Saturday-Thursday, 8AM to 10PM",
@@ -41,11 +42,27 @@
   },
   "branches": {
     "desc": "We have multiple branches in various areas within the capital Damascus to ensure everything that concerns the doctor and the patient anywhere and at any time",
-    "branch1": "Mazah, Moasah, in front of 'Nabel Nafesah' sweet market",
-    "branch2": "Mazah, Moasah, by children hospital",
-    "branch3": "Mazah, Moasah, by Moasah hospital",
-    "branch4": "Mazah, she5 saaed, after 'Molok al shawrma'",
-    "branch5": "Mazah 'asad jamiae'"
+    "map": "Location on Map",
+    "branch1": {
+      "address": "Mazah, Moasah, in front of 'Nabel Nafesah' sweet market",
+      "title": "Moasah Branch 1"
+    },
+    "branch2": {
+      "address": "Mazah, Moasah, by children hospital",
+      "title": "Moasah Branch 2"
+    },
+    "branch3": {
+      "address": "Mazah, Moasah, by Moasah hospital",
+      "title": "Moasah Branch 3"
+    },
+    "branch4": {
+      "address": "Mazah, she5 saaed, after 'Molok al shawrma'",
+      "title": "Sheikh Saad Branch"
+    },
+    "branch5": {
+      "address": "Mazah 'asad jamiae'",
+      "title": "Asad Jamia Branch"
+    }
   },
   "contact": {
     "form": {

@@ -26,9 +26,9 @@ i18next.init({
 })
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
-  <StrictMode>
-    <I18nextProvider i18n={i18next}>
+  <I18nextProvider i18n={i18next}>
+    <StrictMode>
       <App />
-    </I18nextProvider>
-  </StrictMode>
+    </StrictMode>
+  </I18nextProvider>
 )

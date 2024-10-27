@@ -1,7 +1,10 @@
 import React from 'react';
-import { Col, Container, Row } from 'react-bootstrap';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Container } from 'react-bootstrap';
 import HeadingTitle from '../HeadingTitle';
 import { useTranslation } from 'react-i18next';
+import 'swiper/css';
+import "swiper/css/scrollbar";
 
 import threeM from "../../assets/3M-min.png";
 import accu from "../../assets/accu-min.png";
@@ -25,23 +28,23 @@ const Brands = (): React.JSX.Element => {
   const { t: translating } = useTranslation('global');
 
   const brandImages = [
-    { src: threeM, alt: '3M' },
-    { src: accu, alt: 'Accu' },
-    { src: alpk2, alt: 'Alpk2' },
-    { src: boso, alt: 'Boso' },
-    { src: braun, alt: 'Braun' },
-    { src: coloplast, alt: 'Coloplast' },
-    { src: contour, alt: 'Contour' },
-    { src: evon, alt: 'Evon' },
-    { src: litman, alt: 'Litman' },
-    { src: maxell, alt: 'Maxell' },
-    { src: mdf, alt: 'MDF' },
-    { src: rossmax, alt: 'Rossmax' },
-    { src: toshoba, alt: 'Toshiba' },
-    { src: tynor, alt: 'Tynor' },
-    { src: yuwell, alt: 'Yuwell' },
-    { src: glu, alt: 'GLU' },
-    { src: dura, alt: 'Dura' }
+    { id: 1, src: threeM, alt: '3M' },
+    { id: 2, src: accu, alt: 'Accu' },
+    { id: 3, src: alpk2, alt: 'Alpk2' },
+    { id: 4, src: boso, alt: 'Boso' },
+    { id: 5, src: braun, alt: 'Braun' },
+    { id: 6, src: coloplast, alt: 'Coloplast' },
+    { id: 7, src: contour, alt: 'Contour' },
+    { id: 8, src: evon, alt: 'Evon' },
+    { id: 9, src: litman, alt: 'Litman' },
+    { id: 10, src: maxell, alt: 'Maxell' },
+    { id: 11, src: mdf, alt: 'MDF' },
+    { id: 12, src: rossmax, alt: 'Rossmax' },
+    { id: 13, src: toshoba, alt: 'Toshiba' },
+    { id: 14, src: tynor, alt: 'Tynor' },
+    { id: 15, src: yuwell, alt: 'Yuwell' },
+    { id: 16, src: glu, alt: 'GLU' },
+    { id: 17, src: dura, alt: 'Dura' }
   ];
 
   return (
@@ -52,13 +55,33 @@ const Brands = (): React.JSX.Element => {
           desc={translating('brands.title')}
         />
 
-        <Row className='g-5'>
-          {brandImages.map((brand, index) => (
-            <Col key={index} xs={6} sm={4} md={3} lg={2} data-ani='bomb'>
-              <img src={brand.src} alt={brand.alt} loading='lazy' />
-            </Col>
-          ))}
-        </Row>
+        <div className="swiper-container">
+          <Swiper
+            spaceBetween={20}
+            initialSlide={8}
+            slidesPerView={8}
+            loop={false}
+            breakpoints={{
+              1024: {
+                slidesPerView: 8,
+              },
+              768: {
+                slidesPerView: 6,
+              },
+              0: {
+                slidesPerView: 4,
+              }
+            }}
+          >
+            {
+              brandImages.map(brand => (
+                <SwiperSlide key={brand.id}>
+                  <img src={brand.src} alt={brand.alt} loading='lazy' />
+                </SwiperSlide>
+              ))
+            }
+          </Swiper>
+        </div>
       </Container>
     </section>
   );
