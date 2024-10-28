@@ -104,7 +104,16 @@
     width: 100%;
   }
 }
-
+@include keyf("complete-line-y") {
+  from {
+    height: 0;
+    @include opacity(0.3);
+  }
+  to {
+    height: 101%;
+    @include opacity(1);
+  }
+}
 @include keyf("floating") {
   0% {
     @include prefixer(transform, translateY(-18px));

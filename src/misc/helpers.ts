@@ -48,10 +48,16 @@ export const setAnimation = () => {
         const revealElement = entry.target as HTMLElement;
         const animation = revealElement.getAttribute("data-ani");
         let delay: string | null = revealElement.getAttribute("data-delay");
+        let duration: string | null =
+          revealElement.getAttribute("data-duration");
 
         if (!delay || isNaN(parseFloat(delay))) delay = ".3";
+        if (!duration || isNaN(parseFloat(duration))) duration = "1";
 
-        revealElement.style.animation = `${animation} 1s ${delay}s linear forwards`;
+        revealElement.style.animation = `${animation} ${duration}s ${delay}s linear forwards`;
+        setTimeout(() => {
+          revealElement.removeAttribute("data-ani");
+        }, Number(duration) * 1000);
 
         observer.unobserve(revealElement);
       }

@@ -3,16 +3,15 @@
   .branches-container {
     z-index: 1;
 
-    &::before {
+    .line {
       content: "";
       background-color: var(--c-main);
       width: 2px;
-      height: 101%;
       @include prefixer(border-radius, 1px);
       position: absolute;
       left: 50%;
-      top: 50%;
-      @include prefixer(transform, translate(-50%, -50%));
+      top: -5px;
+      @include prefixer(transform, translateX(-50%));
       @include prefixer(transition, var(--time-transition));
       z-index: -1;
     }

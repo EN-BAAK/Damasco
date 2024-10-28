@@ -42,7 +42,8 @@
   },
   "branches": {
     "desc": "We have multiple branches in various areas within the capital Damascus to ensure everything that concerns the doctor and the patient anywhere and at any time",
-    "map": "Location on Map"
+    "mobile": "Phone",
+    "telephone": "Telephone"
   },
   "contact": {
     "form": {

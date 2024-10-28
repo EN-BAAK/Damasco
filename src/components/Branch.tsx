@@ -1,5 +1,6 @@
 import React from 'react'
 import { Card } from 'react-bootstrap'
+import { useTranslation } from 'react-i18next'
 
 interface Props {
   title?: string,
@@ -11,6 +12,8 @@ interface Props {
 }
 
 const Branch = ({ title, address, phone, telephone, side, animationDelay }: Props): React.ReactNode => {
+  const { t: translating } = useTranslation("global")
+
   return (
     <Card
       data-ani={side ? "left" : "right"}
@@ -22,8 +25,8 @@ const Branch = ({ title, address, phone, telephone, side, animationDelay }: Prop
         }
 
         <Card.Subtitle className='fs-5 text-black-50 fw-semibold mb-3'>{address}</Card.Subtitle>
-        <Card.Text className='mb-0 text-black-50 fw-semibold'>Phone: <span className='fw-normal'>{phone}</span></Card.Text>
-        <Card.Text className='mb-0 text-black-50 fw-semibold'>Telephone: <span className='fw-normal'>{telephone}</span></Card.Text>
+        <Card.Text className='mb-0 text-black-50 fw-semibold'>{translating("branches.mobile")}: <span className='fw-normal'>{phone}</span></Card.Text>
+        <Card.Text className='mb-0 text-black-50 fw-semibold'>{translating("branches.telephone")}: <span className='fw-normal'>{telephone}</span></Card.Text>
       </Card.Body>
     </Card>
   )

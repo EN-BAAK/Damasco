@@ -1,15 +1,7 @@
 import React, { useEffect } from 'react'
-import HeaderBar from './components/sections/HeaderBar'
-import TopBar from './components/sections/TopBar'
-import Hero from './components/sections/Hero'
-import AboutUs from './components/sections/AboutUs'
-import Brands from './components/sections/Brands'
-import Contact from './components/sections/Contact'
 import { getItemFromLocalStorage, highlightActiveLink, setAnimation, setItemToLocalStorage } from './misc/helpers'
 import { useTranslation } from 'react-i18next'
-import Cta from './components/Cta'
-import Services from './components/sections/Services'
-import Branches from './components/sections/Branches'
+import Home from './pages/Home'
 
 const App = (): React.JSX.Element => {
   const i18n = useTranslation("global")[1]
@@ -59,16 +51,7 @@ const App = (): React.JSX.Element => {
 
   return (
     <div className={`App ${i18n.language === "ar" && "arabic"}`}>
-      <TopBar />
-      <HeaderBar />
-
-      <Hero />
-      <AboutUs />
-      <Cta />
-      <Brands />
-      <Services />
-      <Branches />
-      <Contact />
+      <Home />
     </div>
   )
 }

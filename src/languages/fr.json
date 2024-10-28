@@ -42,7 +42,8 @@
   },
   "branches": {
     "desc": "Nous avons plusieurs succursales dans diverses zones de la capitale Damas pour garantir tout ce qui concerne le médecin et le patient, n'importe où et à tout moment",
-    "map": "Location on Map"
+    "mobile": "Phone",
+    "telephone": "téléphone"
   },
   "contact": {
     "form": {

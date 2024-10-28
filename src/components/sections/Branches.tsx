@@ -16,6 +16,12 @@ const Branches = (): React.JSX.Element => {
         <HeadingTitle title={translating('global.branches')} desc={translating('branches.desc')} />
 
         <div className="branches-container position-relative w-100">
+          <span
+            data-ani="complete-line-y"
+            data-duration="3.5"
+            data-delay=".1"
+            className='line' />
+
           {
             branches[language].map(branchGroup =>
               <React.Fragment key={`{branch-group-${branchGroup.id}}`}>
