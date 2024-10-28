@@ -72,4 +72,10 @@
   .card-title {
     color: var(--c-main);
   }
+
+  svg {
+    @include set-position(auto, auto, 25px, 25px);
+    color: var(--c-main);
+    cursor: pointer;
+  }
 }

@@ -1,6 +1,8 @@
 import React from 'react'
 import { Card } from 'react-bootstrap'
 import { useTranslation } from 'react-i18next'
+import { FaMapLocationDot } from 'react-icons/fa6';
+
 
 interface Props {
   title?: string,
@@ -18,7 +20,7 @@ const Branch = ({ title, address, phone, telephone, side, animationDelay }: Prop
     <Card
       data-ani={side ? "left" : "right"}
       data-delay={animationDelay}
-      className={`${side ? "right" : "left"} mx-lg-0 mx-auto branch-card border-0 shadow my-4`}>
+      className={`${side ? "right" : "left"} mx-lg-0 mx-auto branch-card border-0 shadow my-4 position-relative`}>
       <Card.Body>
         {title &&
           <Card.Title className='fs-2 fw-bold mb-3'>{title}</Card.Title>
@@ -28,6 +30,10 @@ const Branch = ({ title, address, phone, telephone, side, animationDelay }: Prop
         <Card.Text className='mb-0 text-black-50 fw-semibold'>{translating("branches.mobile")}: <span className='fw-normal'>{phone}</span></Card.Text>
         <Card.Text className='mb-0 text-black-50 fw-semibold'>{translating("branches.telephone")}: <span className='fw-normal'>{telephone}</span></Card.Text>
       </Card.Body>
+
+      <FaMapLocationDot
+        className='position-absolute'
+        size={25} />
     </Card>
   )
 }

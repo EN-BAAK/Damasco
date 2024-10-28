@@ -2,7 +2,6 @@ import React from 'react';
 import { Container } from 'react-bootstrap';
 import HeadingTitle from '../HeadingTitle';
 import { useTranslation } from 'react-i18next';
-// import { FaMapLocationDot } from 'react-icons/fa6';
 import branches from "../../config/branches.json"
 import Branch from '../Branch';
 
