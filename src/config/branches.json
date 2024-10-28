@@ -1,10 +1,167 @@
 {
   "ar": [
-    "المواساة 1",
-    "المواساة 2",
-    "المواساة 3",
-    "الاسد الجامعي",
-    "الشيح سعد"
+    {
+      "id": 1,
+      "location": "المواساة",
+      "branches": [
+        {
+          "id": 1,
+          "title": "الفرع الرئيسي",
+          "address": "المزة، المواساة، مقابل حلويات نبيل نفيسة",
+          "phone": "09XX-XXX-XXX",
+          "telephone": "88XXXXX"
+        },
+        {
+          "id": 2,
+          "title": "فرع مشفى الأطفال",
+          "address": "المزة، المواساة، جانب مشفى الأطفال",
+          "phone": "09XX-XXX-XXX",
+          "telephone": "88XXXXX"
+        },
+        {
+          "id": 3,
+          "title": "فرع عودة",
+          "address": "المزة، المواساة، جانب مشفى المواساة التخصصي",
+          "phone": "09XX-XXX-XXX",
+          "telephone": "88XXXXX"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "location": "الأسد الجامعي",
+      "branches": [
+        {
+          "id": 1,
+          "title": "",
+          "address": "المزة، الأسد الجامعي",
+          "phone": "09XX-XXX-XXX",
+          "telephone": "88XXXXX"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "location": "الشيخ سعد",
+      "branches": [
+        {
+          "id": 1,
+          "title": "",
+          "address": "المزة، الشيخ سعد، بعد ملوك الشاورما",
+          "phone": "09XX-XXX-XXX",
+          "telephone": "88XXXXX"
+        }
+      ]
+    }
   ],
-  "en": ["Moasah 1", "Moasah 2", "Moasah 3", "Asad Jam3e", "She5 Saaed"]
+  "en": [
+    {
+      "id": 1,
+      "location": "Al-Mawassah",
+      "branches": [
+        {
+          "id": 1,
+          "title": "Main Branch",
+          "address": "Al-Mazza, Al-Mawassah, opposite Nabil Nafisa Sweets",
+          "phone": "09XX-XXX-XXX",
+          "telephone": "88XXXXX"
+        },
+        {
+          "id": 2,
+          "title": "Children's Hospital Branch",
+          "address": "Al-Mazza, Al-Mawassah, next to the Children's Hospital",
+          "phone": "09XX-XXX-XXX",
+          "telephone": "88XXXXX"
+        },
+        {
+          "id": 3,
+          "title": "Awda Branch",
+          "address": "Al-Mazza, Al-Mawassah, next to Al-Mawassah Specialized Hospital",
+          "phone": "09XX-XXX-XXX",
+          "telephone": "88XXXXX"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "location": "University of Asad",
+      "branches": [
+        {
+          "id": 1,
+          "title": "",
+          "address": "Al-Mazza, Al asad al jameai",
+          "phone": "09XX-XXX-XXX",
+          "telephone": "88XXXXX"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "location": "Sheikh Saad",
+      "branches": [
+        {
+          "id": 1,
+          "title": "",
+          "address": "Al-Mazza, Sheikh Saad, after Mulk Al-Shawarma",
+          "phone": "09XX-XXX-XXX",
+          "telephone": "88XXXXX"
+        }
+      ]
+    }
+  ],
+  "fr": [
+    {
+      "id": 1,
+      "location": "Al-Mawassah",
+      "branches": [
+        {
+          "id": 1,
+          "title": "Succursale Principale",
+          "address": "Al-Mazza, Al-Mawassah, en face des douceurs Nabil Nafisa",
+          "phone": "09XX-XXX-XXX",
+          "telephone": "88XXXXX"
+        },
+        {
+          "id": 2,
+          "title": "Succursale de l'Hôpital pour Enfants",
+          "address": "Al-Mazza, Al-Mawassah, à côté de l'Hôpital pour Enfants",
+          "phone": "09XX-XXX-XXX",
+          "telephone": "88XXXXX"
+        },
+        {
+          "id": 3,
+          "title": "Succursale Awda",
+          "address": "Al-Mazza, Al-Mawassah, à côté de l'Hôpital Spécialisé Al-Mawassah",
+          "phone": "09XX-XXX-XXX",
+          "telephone": "88XXXXX"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "location": "Université d'Asad",
+      "branches": [
+        {
+          "id": 1,
+          "title": "",
+          "address": "Al-Mazza, Al asad al jameai",
+          "phone": "09XX-XXX-XXX",
+          "telephone": "88XXXXX"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "location": "Sheikh Saad",
+      "branches": [
+        {
+          "id": 1,
+          "title": "",
+          "address": "Al-Mazza, Sheikh Saad, après Mulk Al-Shawarma",
+          "phone": "09XX-XXX-XXX",
+          "telephone": "88XXXXX"
+        }
+      ]
+    }
+  ]
 }

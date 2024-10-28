@@ -18,7 +18,7 @@ const Hero = (): React.JSX.Element => {
           >
             <div>
               <h1>{translating("hero.welcome1")} <span>{translating("global.company")}</span> {translating("hero.welcome2")}</h1>
-              <div id='sub-title'>
+              <div id='sub-title' className='fs-4'>
                 <Typewriter
                   options={{
                     strings: [translating("hero.message1"),

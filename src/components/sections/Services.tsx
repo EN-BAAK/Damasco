@@ -25,6 +25,8 @@ const Services = (): React.JSX.Element => {
                   title={service.title}
                   desc={service.desc}
                   img={images[index]}
+                  animation='popup-up'
+                  animationDelay={index * 0.15}
                 />
               </Col>
             )

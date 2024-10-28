@@ -6,6 +6,7 @@ html {
   scroll-padding: 80px 0 0 0;
 }
 body {
+  background-color: var(--c-white-main);
   font-family: "Open Sans", sans-serif !important;
   font-size: 18px;
 
@@ -58,8 +59,8 @@ input[type="number"] {
   -moz-appearance: textfield;
 }
 section {
+  background-color: var(--c-white-main);
   padding: 50px 20px;
-  // overflow-x: hidden;
   overflow: hidden;
 }
 h1,

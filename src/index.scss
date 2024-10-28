@@ -13,12 +13,12 @@
 @import "./styles/layout/topBar";
 
 /* Components */
-@import "./styles/components/hero";
-@import "./styles/components/aboutUs";
-@import "./styles/components/brands";
-@import "./styles/components/contact";
-@import "./styles/components/services";
-@import "./styles/components/branches";
+@import "./styles/components/sections/hero";
+@import "./styles/components/sections/aboutUs";
+@import "./styles/components/sections/brands";
+@import "./styles/components/sections/contact";
+@import "./styles/components/sections/services";
+@import "./styles/components/sections/branches";
 
 @import "./styles/components/cta";
 @import "./styles/components/languageBox";
@@ -26,3 +26,4 @@
 @import "./styles/components/button";
 @import "./styles/components/headingTitle";
 @import "./styles/components/productsCard";
+@import "./styles/components/branch";

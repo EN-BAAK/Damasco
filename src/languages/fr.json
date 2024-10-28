@@ -5,10 +5,11 @@
     "brands": "marques",
     "about": "à propos",
     "services": "services",
-    "branches": "branches",
+    "branches": "succursales",
     "company": "Damasco",
     "about-us": "à propos de nous",
-    "damasco": "Damasco"
+    "damasco": "Damasco",
+    "cmore": "Voir plus"
   },
   "topBar": {
     "time": "Du samedi au jeudi, de 8h à 22h",
@@ -41,11 +42,7 @@
   },
   "branches": {
     "desc": "Nous avons plusieurs succursales dans diverses zones de la capitale Damas pour garantir tout ce qui concerne le médecin et le patient, n'importe où et à tout moment",
-    "branch1": "Mazah, Moasah, en face du marché sucré 'Nabel Nafesah'",
-    "branch2": "Mazah, Moasah, près de l'hôpital pour enfants",
-    "branch3": "Mazah, Moasah, près de l'hôpital Moasah",
-    "branch4": "Mazah, she5 saaed, après 'Molok al shawrma'",
-    "branch5": "Mazah 'asad jamiae'"
+    "map": "Location on Map"
   },
   "contact": {
     "form": {
