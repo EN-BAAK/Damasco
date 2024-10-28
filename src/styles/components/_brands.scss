@@ -1,29 +1,58 @@
+// #brands {
+//   .container {
+//     .swiper-container {
+//       width: 100%;
+//       margin-bottom: 20px;
+
+//       .swiper-wrapper {
+//         align-items: center;
+
+//         .swiper-slide {
+//           img {
+//             max-width: 100%;
+//             width: 85px;
+//             height: auto;
+//             @include prefixer(transition, var(--time-transition));
+
+//             @include breakpoints(md) {
+//               @include prefixer(filter, grayscale(0.75));
+//               &:hover {
+//                 @include prefixer(filter, grayscale(0));
+//               }
+//             }
+
+//             @include breakpoints(lg) {
+//               width: 110px;
+//             }
+//           }
+//         }
+//       }
+//     }
+//   }
+// }
 #brands {
   .container {
-    .swiper-container {
-      width: 100%;
-      margin-bottom: 20px;
+    .slick-track {
+      @include centering;
 
-      .swiper-wrapper {
-        align-items: center;
+      .slick-slide {
+        @include centering;
 
-        .swiper-slide {
-          img {
-            max-width: 100%;
-            width: 85px;
-            height: auto;
-            @include prefixer(transition, var(--time-transition));
+        img {
+          max-width: 100%;
+          width: 85px;
+          height: auto;
+          @include prefixer(transition, var(--time-transition));
 
-            @include breakpoints(md) {
-              @include prefixer(filter, grayscale(0.75));
-              &:hover {
-                @include prefixer(filter, grayscale(0));
-              }
+          @include breakpoints(md) {
+            @include prefixer(filter, grayscale(0.75));
+            &:hover {
+              @include prefixer(filter, grayscale(0));
             }
+          }
 
-            @include breakpoints(lg) {
-              width: 110px;
-            }
+          @include breakpoints(lg) {
+            width: 110px;
           }
         }
       }

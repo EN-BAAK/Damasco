@@ -47,8 +47,11 @@ export const setAnimation = () => {
       if (entry.isIntersecting) {
         const revealElement = entry.target as HTMLElement;
         const animation = revealElement.getAttribute("data-ani");
+        let delay: string | null = revealElement.getAttribute("data-delay");
 
-        revealElement.style.animation = `${animation} 1s .3s linear forwards`;
+        if (!delay || isNaN(parseFloat(delay))) delay = ".3";
+
+        revealElement.style.animation = `${animation} 1s ${delay}s linear forwards`;
 
         observer.unobserve(revealElement);
       }

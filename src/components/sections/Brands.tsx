@@ -1,32 +1,29 @@
 import React from 'react';
-import { Swiper, SwiperSlide } from 'swiper/react';
 import { Container } from 'react-bootstrap';
 import HeadingTitle from '../HeadingTitle';
 import { useTranslation } from 'react-i18next';
-import 'swiper/css';
-import "swiper/css/scrollbar";
+import Slider from 'react-slick';
 
-import threeM from "../../assets/3M-min.png";
-import accu from "../../assets/accu-min.png";
-import alpk2 from "../../assets/alpk2-min.png";
-import boso from "../../assets/boso-min.png";
-import braun from "../../assets/braun-min.png";
-import coloplast from "../../assets/coloplast-min.png";
-import contour from "../../assets/contour-min.png";
-import evon from "../../assets/evon-min.png";
-import litman from "../../assets/litman-min.png";
-import maxell from "../../assets/maxell-min.png";
-import mdf from "../../assets/mdf-min.png";
-import rossmax from "../../assets/rossmax-min.png";
-import toshoba from "../../assets/toshiba-min.png";
-import tynor from "../../assets/tynor-min.png";
-import yuwell from "../../assets/yuwell-min.png";
-import glu from "../../assets/glu.png";
-import dura from "../../assets/dura.png";
+import threeM from "../../assets/brands/3M-min.png";
+import accu from "../../assets/brands/accu-min.png";
+import alpk2 from "../../assets/brands/alpk2-min.png";
+import boso from "../../assets/brands/boso-min.png";
+import braun from "../../assets/brands/braun-min.png";
+import coloplast from "../../assets/brands/coloplast-min.png";
+import contour from "../../assets/brands/contour-min.png";
+import evon from "../../assets/brands/evon-min.png";
+import litman from "../../assets/brands/litman-min.png";
+import maxell from "../../assets/brands/maxell-min.png";
+import mdf from "../../assets/brands/mdf-min.png";
+import rossmax from "../../assets/brands/rossmax-min.png";
+import toshoba from "../../assets/brands/toshiba-min.png";
+import tynor from "../../assets/brands/tynor-min.png";
+import yuwell from "../../assets/brands/yuwell-min.png";
+import glu from "../../assets/brands/glu.png";
+import dura from "../../assets/brands/dura.png";
 
 const Brands = (): React.JSX.Element => {
   const { t: translating } = useTranslation('global');
-
   const brandImages = [
     { id: 1, src: threeM, alt: '3M' },
     { id: 2, src: accu, alt: 'Accu' },
@@ -46,7 +43,6 @@ const Brands = (): React.JSX.Element => {
     { id: 16, src: glu, alt: 'GLU' },
     { id: 17, src: dura, alt: 'Dura' }
   ];
-
   return (
     <section id="brands">
       <Container>
@@ -56,31 +52,52 @@ const Brands = (): React.JSX.Element => {
         />
 
         <div className="swiper-container">
-          <Swiper
-            spaceBetween={20}
-            initialSlide={8}
-            slidesPerView={8}
-            loop={false}
-            breakpoints={{
-              1024: {
-                slidesPerView: 8,
+          <Slider
+            speed={500}
+            nextArrow={<></>}
+            prevArrow={<></>}
+            initialSlide={0}
+            slidesToShow={7}
+            slidesToScroll={4}
+            infinite={false}
+            responsive={[
+              {
+                breakpoint: 1024,
+                settings: {
+                  slidesToShow: 7,
+                  slidesToScroll: 2,
+                  initialSlide: 7
+                },
               },
-              768: {
-                slidesPerView: 6,
+              {
+                breakpoint: 768,
+                settings: {
+                  slidesToShow: 6,
+                  slidesToScroll: 2,
+                  initialSlide: 6
+                },
               },
-              0: {
-                slidesPerView: 4,
-              }
-            }}
-          >
+              {
+                breakpoint: 0,
+                settings: {
+                  slidesToShow: 4,
+                  slidesToScroll: 2,
+                  initialSlide: 4
+                },
+              },
+            ]}>
             {
-              brandImages.map(brand => (
-                <SwiperSlide key={brand.id}>
-                  <img src={brand.src} alt={brand.alt} loading='lazy' />
-                </SwiperSlide>
+              brandImages.map((brand, index) => (
+                <div key={brand.id}>
+                  <img
+                    data-ani="bomb"
+                    data-delay={`${index * 0.05}`}
+                    src={brand.src}
+                    alt={brand.alt} loading='lazy' />
+                </div>
               ))
             }
-          </Swiper>
+          </Slider>
         </div>
       </Container>
     </section>

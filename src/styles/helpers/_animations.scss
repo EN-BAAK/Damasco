@@ -78,8 +78,8 @@
     @include prefixer(transform, scale(0));
     @include opacity(0);
   }
-  85% {
-    @include prefixer(transform, scale(1.1));
+  65% {
+    @include prefixer(transform, scale(1.6));
     @include opacity(1);
   }
   100% {
