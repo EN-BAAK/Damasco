@@ -14,13 +14,13 @@ interface Props {
 }
 
 const Branch = ({ title, address, phone, telephone, side, animationDelay }: Props): React.ReactNode => {
-  const { t: translating } = useTranslation("global")
+  const { t: translating, i18n: { language } } = useTranslation("global")
 
   return (
     <Card
       data-ani={side ? "left" : "right"}
       data-delay={animationDelay}
-      className={`${side ? "right" : "left"} mx-lg-0 mx-auto branch-card border-0 shadow my-4 position-relative`}>
+      className={`${side ? "right" : "left"} mx-lg-0 mx-auto branch-card shadow border-0 my-4 position-relative`}>
       <Card.Body>
         {title &&
           <Card.Title className='fs-2 fw-bold mb-3'>{title}</Card.Title>
@@ -32,7 +32,7 @@ const Branch = ({ title, address, phone, telephone, side, animationDelay }: Prop
       </Card.Body>
 
       <FaMapLocationDot
-        className='position-absolute'
+        className={`position-absolute ${language !== "ar" && "en"}`}
         size={25} />
     </Card>
   )

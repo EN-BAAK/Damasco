@@ -74,8 +74,12 @@
   }
 
   svg {
-    @include set-position(auto, auto, 25px, 25px);
+    @include set-position(auto, auto, 15px, 20px);
     color: var(--c-main);
     cursor: pointer;
+
+    &.en {
+      @include set-position(auto, 20px, 15px, auto);
+    }
   }
 }

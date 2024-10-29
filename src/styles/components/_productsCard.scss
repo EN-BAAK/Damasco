@@ -23,4 +23,8 @@
       @include prefixer(transition, var(--time-transition));
     }
   }
+
+  .card-title {
+    color: var(--c-main);
+  }
 }
