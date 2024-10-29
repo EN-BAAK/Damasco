@@ -52,6 +52,11 @@ const HeaderBar = (): React.JSX.Element => {
                 {translating("global.branches")}
               </a>
             </li>
+            <li>
+              <a className='text-uppercase' href='#gallery'>
+                {translating("global.gallery")}
+              </a>
+            </li>
           </ul>
 
           <div

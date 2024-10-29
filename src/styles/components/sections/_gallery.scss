@@ -1,0 +1,44 @@
+#gallery {
+  .container {
+    .slick-track {
+      @include centering;
+
+      .slick-slide {
+        @include centering;
+
+        .img-holder {
+          @include prefixer(transition, var(--time-transition));
+
+          &::after {
+            content: "";
+            background-color: #0000003a;
+            @include same-scale(0);
+            @include prefixer(border-radius, 50%);
+            position: absolute;
+            @include center;
+            @include prefixer(transition, var(--time-transition));
+          }
+
+          &:hover {
+            @include prefixer(transform, scale(1.1));
+
+            &::after {
+              @include same-scale(150%);
+            }
+          }
+
+          img {
+            max-width: 100%;
+            width: 85px;
+            height: 85px;
+
+            @include breakpoints(lg) {
+              width: 200px;
+              height: 200px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

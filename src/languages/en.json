@@ -9,7 +9,8 @@
     "company": "Damasco",
     "about-us": "about us",
     "damasco": "Damasco",
-    "cmore": "See more"
+    "cmore": "See more",
+    "gallery": "gallery"
   },
   "topBar": {
     "time": "Saturday-Thursday, 8AM to 10PM",
@@ -44,6 +45,9 @@
     "desc": "We have multiple branches in various areas within the capital Damascus to ensure everything that concerns the doctor and the patient anywhere and at any time",
     "mobile": "Phone",
     "telephone": "Telephone"
+  },
+  "gallery": {
+    "title": "Gallery"
   },
   "contact": {
     "form": {

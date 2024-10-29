@@ -9,9 +9,8 @@
       width: 2px;
       @include prefixer(border-radius, 1px);
       position: absolute;
-      left: 50%;
+      @include center-x;
       top: -5px;
-      @include prefixer(transform, translateX(-50%));
       @include prefixer(transition, var(--time-transition));
       z-index: -1;
     }
