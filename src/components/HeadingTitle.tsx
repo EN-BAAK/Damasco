@@ -6,13 +6,13 @@ const HeadingTitle = ({ title, desc }: { title: string, desc?: string }): React.
 
   return (
     <div className='heading-title' data-ani="down" >
-      <h1>{title}</h1>
+      <h1 className='text-lowercase'>{title}</h1>
       {
         desc && (
           <p>{desc}</p>
         )
       }
-      <span className={i18n.language === 'ar' ? "ar" : ""}>{title}</span>
+      <span className={`${i18n.language === 'ar' ? "ar" : ""} text-lowercase`}>{title}</span>
     </div >
   )
 }

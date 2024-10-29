@@ -115,23 +115,4 @@ header {
       }
     }
   }
-
-  .contact-btn {
-    button {
-      background-color: var(--c-main);
-      padding: 8px 25px;
-      border: none;
-      @include prefixer(border-radius, 6px);
-      @include prefixer(transition, var(--time-transition));
-      font-size: 14px;
-      color: var(--c-white-main);
-      &:hover {
-        background-color: var(--c-main-shadow);
-      }
-      @include breakpoints("(max-width: 560px)") {
-        padding: 8px 15px;
-        font-size: 12px;
-      }
-    }
-  }
 }

@@ -1,7 +1,6 @@
 {
   "global": {
     "home": "home",
-    "contact": "contact us",
     "brands": "brands",
     "about": "about",
     "services": "services",
@@ -48,15 +47,5 @@
   },
   "gallery": {
     "title": "Gallery"
-  },
-  "contact": {
-    "form": {
-      "name": "Name",
-      "mobile": "Mobile Number (optional)",
-      "email": "Email",
-      "subject": "Subject",
-      "message": "Message",
-      "confirm": "Send"
-    }
   }
 }

@@ -70,10 +70,6 @@ const HeaderBar = (): React.JSX.Element => {
           </div>
         </Navbar>
 
-        <a href='#contact' className='contact-btn'>
-          <button className='text-nowrap'>{translating("global.contact")}</button>
-        </a>
-
         <div className={`${i18n.language !== 'ar' ? "me-2 me-md-0 ms-2" : "ms-2 ms-md-0 me-2"}`}>
           <LanguageBox />
         </div>

@@ -7,7 +7,6 @@ import Cta from '../components/Cta'
 import Brands from '../components/sections/Brands'
 import Services from '../components/sections/Services'
 import Branches from '../components/sections/Branches'
-import Contact from '../components/sections/Contact'
 import Gallery from '../components/sections/Gallery'
 
 const Home = (): React.JSX.Element => {
@@ -23,7 +22,6 @@ const Home = (): React.JSX.Element => {
       <Services />
       <Branches />
       <Gallery />
-      <Contact />
     </div>
   )
 }
