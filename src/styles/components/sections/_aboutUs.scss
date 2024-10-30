@@ -29,6 +29,7 @@
 
       img {
         @include prefixer(border-radius, 8px);
+        cursor: pointer;
       }
     }
   }

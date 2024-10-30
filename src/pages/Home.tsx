@@ -8,6 +8,7 @@ import Brands from '../components/sections/Brands'
 import Services from '../components/sections/Services'
 import Branches from '../components/sections/Branches'
 import Gallery from '../components/sections/Gallery'
+import Guarantee from '../components/sections/Guarantee'
 
 const Home = (): React.JSX.Element => {
   return (
@@ -18,6 +19,7 @@ const Home = (): React.JSX.Element => {
       <Hero />
       <AboutUs />
       <Cta />
+      <Guarantee />
       <Brands />
       <Services />
       <Branches />

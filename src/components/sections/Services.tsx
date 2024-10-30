@@ -6,13 +6,15 @@ import { Col, Container, Row } from 'react-bootstrap';
 import service1 from "../../assets/services/corset-min.png"
 import service2 from "../../assets/services/surgical-instruments-min.png"
 import service3 from "../../assets/services/catheters-min.png"
+import service4 from "../../assets/services/devices-min.png"
+import service5 from "../../assets/services/apparel-min.png"
 import services from "../../config/services.json"
 
 const Services = (): React.JSX.Element => {
   const { t: translating, i18n } = useTranslation("global");
 
   const language = i18n.language === "ar" ? "ar" : i18n.language === "en" ? "en" : "fr"
-  const images = [service1, service2, service3, service1, service1, service1]
+  const images = [service1, service2, service3, service4, service5, service1]
 
   return (
     <section id='services'>

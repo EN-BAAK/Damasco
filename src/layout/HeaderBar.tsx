@@ -38,6 +38,11 @@ const HeaderBar = (): React.JSX.Element => {
               </a>
             </li>
             <li>
+              <a className='text-uppercase' href='#guarantee'>
+                {translating("global.guarantee")}
+              </a>
+            </li>
+            <li>
               <a className='text-uppercase' href='#brands'>
                 {translating("global.brands")}
               </a>

@@ -3,6 +3,7 @@
     "home": "home",
     "brands": "brands",
     "about": "about",
+    "guarantee": "guarantee",
     "services": "services",
     "branches": "branches",
     "company": "Damasco",
@@ -36,6 +37,11 @@
   "cta": {
     "title": "Damasco prides itself on having multiple branches within Damascus, ensuring the reach of its services and products to the largest possible number of customers in the region. Whether you are a doctor looking for precise tools and innovative medical devices, or a patient in need of reliable medical supplies for daily use, Damasco is the perfect partner for you. We are here to support you every step of the way on the path of comprehensive healthcare",
     "btn": "Explore more"
+  },
+  "guarantee": {
+    "title": "guarantees",
+    "desc": "Over the years of Damascus Company's journey, we have partnered with a selection of local and international companies known for their superior quality. This drove us to provide guarantees to enhance customer trust in us.",
+    "guarantee": "The Alpha Sugar Measure Device sets a new standard in diabetes care with its emphasis on data security and user privacy, utilizing robust encryption methods to safeguard sensitive health information. Its durable construction ensures longevity, making it a dependable companion for daily glucose monitoring needs. This innovative device caters to users of all ages, offering a seamless and comfortable experience in tracking blood sugar levels. With its focus on accuracy and ease of use, the Alpha device empowers individuals to take control of their health with confidence and peace of mind. Its blend of advanced technology and user-centric design makes it a valuable asset for those prioritizing proactive and effective diabetes management."
   },
   "services": {
     "desc": "We offer a diverse range of essential products for medical professionals in surgical procedures and examinations, in addition to providing all the necessary equipment and tools for nurses and patients"

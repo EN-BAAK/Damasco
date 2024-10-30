@@ -3,6 +3,7 @@
     "home": "accueil",
     "brands": "marques",
     "about": "à propos",
+    "guarantee": "Garantie",
     "services": "services",
     "branches": "succursales",
     "company": "Damasco",
@@ -36,6 +37,11 @@
   "cta": {
     "title": "Damasco est fier d'avoir plusieurs succursales à Damas, garantissant la portée de ses services et produits au plus grand nombre possible de clients de la région. Que vous soyez un médecin à la recherche d'outils précis et d'appareils médicaux innovants, ou un patient ayant besoin de fournitures médicales fiables pour un usage quotidien, Damasco est le partenaire idéal pour vous. Nous sommes là pour vous soutenir à chaque étape sur le chemin d'une santé globale",
     "btn": "Explorer plus"
+  },
+  "guarantee": {
+    "title": "Garanties",
+    "desc": "Au fil des années du parcours de la société Damas, nous avons noué des partenariats avec une sélection d'entreprises locales et internationales réputées pour leur qualité supérieure. Cela nous a poussés à offrir des garanties pour renforcer la confiance de nos clients en nous.",
+    "guarantee": "Le dispositif de mesure du sucre Alpha établit une nouvelle norme dans les soins du diabète en mettant l'accent sur la sécurité des données et la confidentialité des utilisateurs, en utilisant des méthodes de cryptage robustes pour protéger les informations de santé sensibles. Sa construction durable garantit sa longévité, en faisant de lui un compagnon fiable pour les besoins quotidiens de surveillance du glucose. Cet appareil innovant s'adresse aux utilisateurs de tous âges, offrant une expérience fluide et confortable dans le suivi des niveaux de sucre dans le sang. Avec son accent sur la précision et la facilité d'utilisation, le dispositif Alpha permet aux individus de prendre le contrôle de leur santé en toute confiance et sérénité. Son mélange de technologie avancée et de design centré sur l'utilisateur en fait un atout précieux pour ceux qui donnent la priorité à une gestion proactive et efficace du diabète."
   },
   "services": {
     "desc": "Nous offrons une gamme diversifiée de produits essentiels pour les professionnels de la santé dans les procédures chirurgicales et les examens, en plus de fournir tout l'équipement et les outils nécessaires pour les infirmières et les patients"

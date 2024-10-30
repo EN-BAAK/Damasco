@@ -8,6 +8,7 @@
 
         .img-holder {
           @include prefixer(transition, var(--time-transition));
+          cursor: pointer;
 
           &::after {
             content: "";
