@@ -1,7 +1,7 @@
 import React from 'react'
 import { useTranslation } from 'react-i18next';
 import { FaMobileScreenButton } from "react-icons/fa6";
-import { phone } from '../../misc/global';
+import { phone } from '../misc/global';
 
 const TopBar = (): React.JSX.Element => {
   const { t: translating, i18n } = useTranslation("global");

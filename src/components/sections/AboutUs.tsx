@@ -21,7 +21,7 @@ const AboutUs = (): React.JSX.Element => {
             className={`img-holder col-lg-6 col-12 ${arStyle}`}
             data-ani={isArabic ? "left" : "right"}
           >
-            <img src={AboutImg} className='img-fluid' />
+            <img src={AboutImg} className='img-fluid' alt='about-img' />
           </div>
           <div
             className={`col-lg-6 col-12 m-0 ${arStyle}`}

@@ -1,5 +1,6 @@
 import React from 'react'
 import { Card } from 'react-bootstrap'
+import { useAppContext } from '../context/AppContext'
 
 interface Props {
   title: string,
@@ -10,12 +11,14 @@ interface Props {
 }
 
 const ProductsCard = ({ title, desc, img, animation, animationDelay }: Props): React.JSX.Element => {
+  const { showImage } = useAppContext()
+
   return (
     <Card
       data-ani={animation}
       data-delay={animationDelay}
       className='products-card border-0 overflow-hidden'>
-      <div className="card-img-top overflow-hidden position-relative">
+      <div className="card-img-top overflow-hidden position-relative" onClick={() => showImage(img)}>
         <img src={img} alt={title} />
       </div>
 

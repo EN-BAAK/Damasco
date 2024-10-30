@@ -13,9 +13,12 @@ import image8 from "../../assets/gallery/image-8-min.png"
 import image9 from "../../assets/gallery/image-9-min.png"
 import Slider from 'react-slick'
 import { Container } from 'react-bootstrap'
+import { useAppContext } from '../../context/AppContext'
 
 const Gallery = (): React.JSX.Element => {
   const { t: translating } = useTranslation("global")
+  const { showImage } = useAppContext()
+
   const images = [
     { id: 1, src: image, alt: 'Image Min' },
     { id: 2, src: image1, alt: 'Image 1' },
@@ -73,7 +76,9 @@ const Gallery = (): React.JSX.Element => {
               images.map((img, index) => (
                 <div
                   className='img-holder position-relative border border-4 border-light-subtle shadow-lg overflow-hidden'
-                  key={img.id}>
+                  key={img.id}
+                  onClick={() => showImage(img.src)}
+                >
                   <img
                     data-ani="bomb"
                     data-delay={`${index * 0.05}`}

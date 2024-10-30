@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Container, Navbar } from 'react-bootstrap';
 import { useTranslation } from 'react-i18next';
-import LanguageBox from '../LanguageBox';
+import LanguageBox from '../components/LanguageBox';
 
 const HeaderBar = (): React.JSX.Element => {
   const [active, setActive] = useState<boolean>(false)

@@ -77,9 +77,14 @@
     @include set-position(auto, auto, 15px, 20px);
     color: var(--c-main);
     cursor: pointer;
+    @include prefixer(transition, var(--time-transition));
 
     &.en {
       @include set-position(auto, 20px, 15px, auto);
+    }
+
+    &:hover {
+      color: var(--c-main-shadow);
     }
   }
 }

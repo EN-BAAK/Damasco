@@ -39,6 +39,7 @@ const Hero = (): React.JSX.Element => {
           >
             <img
               src={Logo}
+              alt='logo'
             />
           </div>
         </Row>

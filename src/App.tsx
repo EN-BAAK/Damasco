@@ -50,7 +50,7 @@ const App = (): React.JSX.Element => {
   }, []);
 
   return (
-    <div className={`App ${i18n.language === "ar" && "arabic"}`}>
+    <div className={`App ${i18n.language === "ar" && "arabic"} position-relative`}>
       <Home />
     </div>
   )
