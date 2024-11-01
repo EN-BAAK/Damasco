@@ -14,7 +14,7 @@
   },
   "topBar": {
     "time": "Du samedi au jeudi, de 8h à 22h",
-    "calling": "Appelez-nous : +963 954 439 592"
+    "calling": "Appelez-nous : +963 954 xxx xxx"
   },
   "hero": {
     "welcome1": "Bienvenue chez",
@@ -74,6 +74,15 @@
         "about": "À Propos",
         "services": "Services",
         "branches": "Filiales"
+      }
+    },
+    "contact": {
+      "damasco": "Bienvenue chez Damasco Société de fournitures médicales.",
+      "markering": "Tout ce dont les médecins et les patients ont besoin.",
+      "social": {
+        "mail": "mail",
+        "phone": "mobile",
+        "telephone": "téléphone"
       }
     }
   }

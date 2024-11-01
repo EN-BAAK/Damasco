@@ -14,7 +14,7 @@
   },
   "topBar": {
     "time": "Saturday-Thursday, 8AM to 10PM",
-    "calling": " Call Us: +963 954 439 592"
+    "calling": " Call Us: +963 954 xxx xxx"
   },
   "hero": {
     "welcome1": "Welcome to",
@@ -74,6 +74,15 @@
         "about": "About Us",
         "services": "Services",
         "branches": "Branches"
+      }
+    },
+    "contact": {
+      "damasco": "Welcome to Damasco Medical Supplies Company.",
+      "marketing": "Everything needed for doctors and patients.",
+      "social": {
+        "mail": "mail",
+        "phone": "mobile",
+        "telephone": "telephone"
       }
     }
   }

@@ -61,16 +61,33 @@ const Footer = (): React.JSX.Element => {
       content: translating("footer.services.content.oxygen"),
     }
   ];
+  const contact = [
+    {
+      id: 1,
+      social: translating("footer.contact.social.mail"),
+      link: "xxxxxx@gmail.com",
+    },
+    {
+      id: 2,
+      social: translating("footer.contact.social.phone"),
+      link: "+963 09xx xxx xxx"
+    },
+    {
+      id: 2,
+      social: translating("footer.contact.social.telephone"),
+      link: "88xxxxxx"
+    }
+  ]
 
   return (
     <section id='footer' className="bg-light">
       <Container>
-        <Row className='g-3 text-md-start text-center'>
+        <Row className='g-5'>
           <Col
             data-ani={language === "ar" ? "left" : "right"}
             md={6}
             lg={language === "ar" ? { span: 2, offset: 1 } : { span: 2, offset: 0 }}
-            className="pe-3 p-sm-1">
+            className="pe-3 p-sm-1 text-md-start text-center">
             <img
               src={logo}
               alt='logo'
@@ -86,7 +103,7 @@ const Footer = (): React.JSX.Element => {
             className="pe-3 p-sm-1 links">
             <h5 className={`mb-3 fw-semibold ${language === "ar" ? "text-end" : "text-start"}`}>{translating("footer.links.title")}</h5>
 
-            <ul className="m-0 p-0 d-flex flex-column align-items-md-start align-items-center gap-3">
+            <ul className="m-0 p-0 d-flex flex-column gap-3">
               {links.map(link => <li key={`footer-link-${link.id}`}>
                 <a href={link.href} className='d-flex align-items-center gap-1 decoration-none'>
                   {language === "ar" ? <IoIosArrowBack className='d-none d-md-block' /> : <IoIosArrowForward className='d-none d-md-block' />}
@@ -100,11 +117,11 @@ const Footer = (): React.JSX.Element => {
             data-ani={language === "ar" ? "left" : "right"}
             data-delay="0.9"
             md={6}
-            lg={2}
+            lg={{ span: 2, offset: language === "ar" ? 1 : 0 }}
             className="pe-3 p-sm-1">
             <h5 className={`mb-3 fw-semibold ${language === "ar" ? "text-end" : "text-start"}`}>{translating("footer.services.title")}</h5>
 
-            <ul className="m-0 p-0 d-flex flex-column align-items-md-start align-items-center gap-3">
+            <ul className="m-0 p-0 d-flex flex-column gap-3">
               {services.map((service) => (
                 <li key={`footer-services-${service.id}`}>
                   <p className='d-flex align-items-center gap-1 m-0'>
@@ -119,19 +136,21 @@ const Footer = (): React.JSX.Element => {
           <Col
             data-ani={language === "ar" ? "left" : "right"}
             data-delay="1.2"
-            lg={{ span: 4, offset: 1 }}
+            lg={{ span: 4, offset: language === "ar" ? 0 : 1 }}
             md={6}
-            className="pe-3 p-sm-1"
+            className={`pe-3 p-sm-1 ${language === "ar" ? "text-end" : "text-start"}`}
           >
-            <h5 className="mb-5">Our Newsletter</h5>
-            <p className="mb-4">
-              Tamen quem nulla quae legam multos aute sint
-              culpa legam noster magna
+            <h5 className={`mb-3 fw-semibold`}>{translating("footer.contact.damasco")}</h5>
+
+            <p className="mb-5">
+              {translating("footer.contact.marketing")}
             </p>
-            <div className="input d-flex overflow-hidden">
-              <input type="text" />
-              <button type="button">Subscribe</button>
-            </div>
+
+            <ul className='m-0 p-0 contact'>
+              {contact.map(contact => <li key={`footer-contact-${contact.id}`}>
+                <p className='fw-semibold'>{contact.social}: <span className='fw-normal'>{contact.link}</span></p>
+              </li>)}
+            </ul>
           </Col>
         </Row>
       </Container>
