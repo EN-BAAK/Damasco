@@ -6,6 +6,7 @@ import guaranteeImg from "../../assets/guarantee/alpha-min.png"
 import guarantee from "../../config/guarantee.json"
 import { BiSolidBookmarkPlus } from "react-icons/bi";
 import { useAppContext } from '../../context/AppContext'
+import CompressedImage from '../CompressedImage'
 
 const Guarantee = (): React.JSX.Element => {
   const { t: translating, i18n } = useTranslation("global")
@@ -26,12 +27,15 @@ const Guarantee = (): React.JSX.Element => {
             <p className='fw-semibold fs-5'>{translating("guarantee.guarantee")}</p>
           </Col>
           <Col lg={6} data-ani={language === "ar" ? "left" : "right"}>
-            <img
+            <CompressedImage
               src={guaranteeImg}
               alt='alpha'
               loading='lazy'
-              onClick={() => showImage(guaranteeImg)}
-              className='rounded-4' />
+              clickEvent={() => showImage(guaranteeImg)}
+              style='rounded-4'
+              blurWidth="100%"
+              blurHeight={500}
+            />
           </Col>
           <Col lg={6} data-ani={language === "ar" ? "right" : "left"}>
             <ul className='m-0 px-2 py-4 shadow rounded-4 d-flex flex-column gap-3'>

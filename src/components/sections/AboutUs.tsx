@@ -4,6 +4,7 @@ import { useTranslation } from 'react-i18next';
 import { Container, Row } from 'react-bootstrap';
 import AboutImg from "../../assets/about.jpg"
 import { useAppContext } from '../../context/AppContext';
+import CompressedImage from '../CompressedImage';
 
 const AboutUs = (): React.JSX.Element => {
   const { t: translating, i18n } = useTranslation("global");
@@ -24,11 +25,13 @@ const AboutUs = (): React.JSX.Element => {
             className={`img-holder col-lg-6 col-12 ${arStyle}`}
             data-ani={isArabic ? "left" : "right"}
           >
-            <img
-              onClick={() => showImage(AboutImg)}
+            <CompressedImage
+              clickEvent={() => showImage(AboutImg)}
               src={AboutImg}
-              className='img-fluid'
+              style='img-fluid'
               loading='lazy'
+              blurWidth="100%"
+              blurHeight={450}
               alt='about-img' />
           </div>
           <div

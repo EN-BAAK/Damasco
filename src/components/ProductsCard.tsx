@@ -1,6 +1,7 @@
 import React from 'react'
 import { Card } from 'react-bootstrap'
 import { useAppContext } from '../context/AppContext'
+import CompressedImage from './CompressedImage'
 
 interface Props {
   title: string,
@@ -19,7 +20,13 @@ const ProductsCard = ({ title, desc, img, animation, animationDelay }: Props): R
       data-delay={animationDelay}
       className='products-card border-0 overflow-hidden'>
       <div className="card-img-top overflow-hidden position-relative" onClick={() => showImage(img)}>
-        <img src={img} alt={title} loading='lazy' />
+        <CompressedImage
+          src={img}
+          alt={title}
+          loading='lazy'
+          blurWidth="100%"
+          blurHeight="100%"
+        />
       </div>
 
       <Card.Body>

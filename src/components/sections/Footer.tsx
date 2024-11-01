@@ -73,7 +73,7 @@ const Footer = (): React.JSX.Element => {
       link: "+963 09xx xxx xxx"
     },
     {
-      id: 2,
+      id: 3,
       social: translating("footer.contact.social.telephone"),
       link: "88xxxxxx"
     }
@@ -101,7 +101,7 @@ const Footer = (): React.JSX.Element => {
             md={6}
             lg={language === "ar" ? { span: 2, offset: 0 } : { span: 2, offset: 1 }}
             className="pe-3 p-sm-1 links">
-            <h5 className={`mb-3 fw-semibold ${language === "ar" ? "text-end" : "text-start"}`}>{translating("footer.links.title")}</h5>
+            <h1 className={`mb-3 fw-semibold fs-5 ${language === "ar" ? "text-end" : "text-start"}`}>{translating("footer.links.title")}</h1>
 
             <ul className="m-0 p-0 d-flex flex-column gap-3">
               {links.map(link => <li key={`footer-link-${link.id}`}>
@@ -119,7 +119,7 @@ const Footer = (): React.JSX.Element => {
             md={6}
             lg={{ span: 2, offset: language === "ar" ? 1 : 0 }}
             className="pe-3 p-sm-1">
-            <h5 className={`mb-3 fw-semibold ${language === "ar" ? "text-end" : "text-start"}`}>{translating("footer.services.title")}</h5>
+            <h1 className={`mb-3 fw-semibold fs-5 ${language === "ar" ? "text-end" : "text-start"}`}>{translating("footer.services.title")}</h1>
 
             <ul className="m-0 p-0 d-flex flex-column gap-3">
               {services.map((service) => (
@@ -140,7 +140,7 @@ const Footer = (): React.JSX.Element => {
             md={6}
             className={`pe-3 p-sm-1 ${language === "ar" ? "text-end" : "text-start"}`}
           >
-            <h5 className={`mb-3 fw-semibold`}>{translating("footer.contact.damasco")}</h5>
+            <h1 className={`mb-3 fw-semibold fs-5`}>{translating("footer.contact.damasco")}</h1>
 
             <p className="mb-5">
               {translating("footer.contact.marketing")}

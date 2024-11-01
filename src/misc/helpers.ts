@@ -57,7 +57,7 @@ export const setAnimation = () => {
         revealElement.style.animation = `${animation} ${duration}s ${delay}s linear forwards`;
         setTimeout(() => {
           revealElement.removeAttribute("data-ani");
-        }, Number(duration) * 1000);
+        }, Number(duration) * 1000 + Number(delay) * 1000);
 
         observer.unobserve(revealElement);
       }

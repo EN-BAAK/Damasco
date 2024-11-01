@@ -22,6 +22,7 @@ import yuwell from "../../assets/brands/yuwell-min.png";
 import glu from "../../assets/brands/glu.png";
 import dura from "../../assets/brands/dura.png";
 import { useAppContext } from '../../context/AppContext';
+import CompressedImage from '../CompressedImage';
 
 const Brands = (): React.JSX.Element => {
   const { t: translating } = useTranslation('global');
@@ -92,13 +93,16 @@ const Brands = (): React.JSX.Element => {
             {
               brandImages.map((brand, index) => (
                 <div key={`brand-img-${brand.id}`}>
-                  <img
-                    onClick={() => showImage(brand.src)}
-                    data-ani="bomb"
-                    data-delay={`${index * 0.05}`}
+                  <CompressedImage
+                    clickEvent={() => showImage(brand.src)}
+                    animation="bomb"
+                    animationDelay={index * 0.05}
                     src={brand.src}
                     alt={brand.alt}
-                    loading='lazy' />
+                    loading='lazy'
+                    blurWidth={85}
+                    blurHeight={85}
+                  />
                 </div>
               ))
             }

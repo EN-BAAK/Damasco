@@ -14,6 +14,7 @@ import image9 from "../../assets/gallery/image-9-min.png"
 import Slider from 'react-slick'
 import { Container } from 'react-bootstrap'
 import { useAppContext } from '../../context/AppContext'
+import CompressedImage from '../CompressedImage'
 
 const Gallery = (): React.JSX.Element => {
   const { t: translating } = useTranslation("global")
@@ -79,12 +80,15 @@ const Gallery = (): React.JSX.Element => {
                   key={`img-${img.id}`}
                   onClick={() => showImage(img.src)}
                 >
-                  <img
-                    data-ani="bomb"
-                    data-delay={`${index * 0.05}`}
+                  <CompressedImage
+                    animation="bomb"
+                    animationDelay={index * 0.05}
                     src={img.src}
                     loading='lazy'
-                    alt={img.alt} />
+                    alt={img.alt}
+                    blurWidth={85}
+                    blurHeight={85}
+                  />
                 </div>
               ))
             }
