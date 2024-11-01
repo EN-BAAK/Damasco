@@ -1,0 +1,16 @@
+#footer {
+  img {
+    width: 250px;
+  }
+
+  .links {
+    a {
+      color: var(--c-black-main);
+      @include prefixer(transition, var(--time-transition));
+
+      &:hover {
+        color: var(--c-main);
+      }
+    }
+  }
+}

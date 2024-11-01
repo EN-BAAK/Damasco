@@ -91,13 +91,14 @@ const Brands = (): React.JSX.Element => {
             ]}>
             {
               brandImages.map((brand, index) => (
-                <div key={brand.id}>
+                <div key={`brand-img-${brand.id}`}>
                   <img
                     onClick={() => showImage(brand.src)}
                     data-ani="bomb"
                     data-delay={`${index * 0.05}`}
                     src={brand.src}
-                    alt={brand.alt} loading='lazy' />
+                    alt={brand.alt}
+                    loading='lazy' />
                 </div>
               ))
             }

@@ -53,5 +53,28 @@
   },
   "gallery": {
     "title": "Gallery"
+  },
+  "footer": {
+    "services": {
+      "title": "Our Services",
+      "content": {
+        "braces": "Braces and Supports",
+        "Instruments": "Surgical Instruments",
+        "catheters": "Catheters",
+        "devices": "Medical Devices",
+        "apparel": "Medical Apparel",
+        "oxygen": "Oxygen Equipment"
+      }
+    },
+    "links": {
+      "title": "Useful Links",
+      "content": {
+        "home": "Home",
+        "brands": "Brands",
+        "about": "About Us",
+        "services": "Services",
+        "branches": "Branches"
+      }
+    }
   }
 }

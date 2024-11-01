@@ -40,6 +40,7 @@ const Hero = (): React.JSX.Element => {
             <img
               src={Logo}
               alt='logo'
+              loading='lazy'
             />
           </div>
         </Row>

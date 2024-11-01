@@ -10,7 +10,7 @@ const Branches = (): React.JSX.Element => {
   const language = i18n.language === "ar" ? "ar" : i18n.language === "en" ? "en" : "fr"
 
   return (
-    <section id="branches" className='overflow-hidden'>
+    <section id="branches" className='overflow-hidden bg-light'>
       <Container>
         <HeadingTitle title={translating('global.branches')} desc={translating('branches.desc')} />
 

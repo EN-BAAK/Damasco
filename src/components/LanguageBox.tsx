@@ -28,7 +28,7 @@ const LanguageBox = (): React.JSX.Element => {
           <ul className="m-0 p-0">
             {langs.map((item, index) => (
               <li
-                key={index}
+                key={`lang-${index}`}
                 className={currentLanguage === item.key ? "active" : ""}
                 onClick={() => handleChangeLanguage(item.key)}
               >{item.name}</li>

@@ -76,14 +76,15 @@ const Gallery = (): React.JSX.Element => {
               images.map((img, index) => (
                 <div
                   className='img-holder position-relative border border-4 border-light-subtle shadow-lg overflow-hidden'
-                  key={img.id}
+                  key={`img-${img.id}`}
                   onClick={() => showImage(img.src)}
                 >
                   <img
                     data-ani="bomb"
                     data-delay={`${index * 0.05}`}
                     src={img.src}
-                    alt={img.alt} loading='lazy' />
+                    loading='lazy'
+                    alt={img.alt} />
                 </div>
               ))
             }

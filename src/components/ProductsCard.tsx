@@ -19,7 +19,7 @@ const ProductsCard = ({ title, desc, img, animation, animationDelay }: Props): R
       data-delay={animationDelay}
       className='products-card border-0 overflow-hidden'>
       <div className="card-img-top overflow-hidden position-relative" onClick={() => showImage(img)}>
-        <img src={img} alt={title} />
+        <img src={img} alt={title} loading='lazy' />
       </div>
 
       <Card.Body>

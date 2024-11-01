@@ -9,6 +9,7 @@ import Services from '../components/sections/Services'
 import Branches from '../components/sections/Branches'
 import Gallery from '../components/sections/Gallery'
 import Guarantee from '../components/sections/Guarantee'
+import Footer from '../components/sections/Footer'
 
 const Home = (): React.JSX.Element => {
   return (
@@ -24,6 +25,8 @@ const Home = (): React.JSX.Element => {
       <Services />
       <Branches />
       <Gallery />
+
+      <Footer />
     </div>
   )
 }

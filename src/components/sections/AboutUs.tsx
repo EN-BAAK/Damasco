@@ -28,6 +28,7 @@ const AboutUs = (): React.JSX.Element => {
               onClick={() => showImage(AboutImg)}
               src={AboutImg}
               className='img-fluid'
+              loading='lazy'
               alt='about-img' />
           </div>
           <div

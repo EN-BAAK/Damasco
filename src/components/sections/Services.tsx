@@ -24,7 +24,10 @@ const Services = (): React.JSX.Element => {
         <Row className='g-3 align-items-stretch justify-content-center'>
           {
             services[language].map((service, index) =>
-              <Col className='d-flex' key={`service-${service.id}`} xs={12} sm={6} lg={4} xl={3} >
+              <Col
+                className='d-flex'
+                key={`service-${service.id}`}
+                xs={12} sm={6} lg={4} xl={3} >
                 <ProductsCard
                   title={service.title}
                   desc={service.desc}

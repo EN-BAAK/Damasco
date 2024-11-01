@@ -53,5 +53,28 @@
   },
   "gallery": {
     "title": "معرض الصور"
+  },
+  "footer": {
+    "services": {
+      "title": "خدماتنا",
+      "content": {
+        "braces": "مشدات و دعامات",
+        "Instruments": "ادوات جراحية",
+        "catheters": "قثاطر",
+        "devices": "اجهزة طبية",
+        "apparel": "ملابس طبية",
+        "oxygen": "اجهزة اوكسجين"
+      }
+    },
+    "links": {
+      "title": "روابط سريعة",
+      "content": {
+        "home": "الرئيسية",
+        "brands": "علامات تجارية",
+        "about": "من نحن",
+        "services": "الخدمات",
+        "branches": "الافرع"
+      }
+    }
   }
 }
