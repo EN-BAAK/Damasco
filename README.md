@@ -1,30 +1,68 @@
-# React + TypeScript + Vite
+# Damasco - Medical Supplies Landing Page
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Damasco is a responsive landing page for a medical supplies company designed to cater to the needs of both doctors and patients. The website offers a wide range of medical products and services.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Top Bar**: Displays company working hours and contact information.
+- **Header Navbar**: Navigation links to different sections, a language switcher, and the company name.
+- **Hero Section**: Features a logo, title, and four subtitles with typewriter animation.
+- **About Us**: Includes an image of the company building and a description.
+- **Guarantee Section**: Provides information about guaranteed products, including images and features.
+- **Brands Section**: Scrollable images using Swiper.
+- **Services Section**: Cards displaying service images, titles, and descriptions.
+- **Branches Section**: Lists all company branches with location details and contact information.
+- **Gallery Section**: Scrollable images using Swiper.
+- **Footer**: Includes a logo, quick links, services, and contact information.
 
-## Expanding the ESLint configuration
+## Technologies Used
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- React
+- TypeScript
+- SCSS
+- Bootstrap 5
+- Libraries: React Icons, React Router DOM, i18next, Blurhash, Swiper, Typewriter Effect
 
-- Configure the top-level `parserOptions` property like this:
+## Multilingual Support
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+The website supports three languages: Arabic, English, and French. The default language is determined by the user's browser settings. User-selected language preferences are stored in session storage for improved performance.
+
+## Installation and Setup
+
+To run the project locally, follow these steps:
+
+1. Clone the repository:
+
+```bash
+git clone [repository_url]
+
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+2. Navigate to the project directory:
+
+```bash
+cd ./damasco
+```
+
+3. Install dependencies:
+
+```bash
+npm install
+```
+
+4. Build the project:
+
+```bash
+npm run build
+```
+
+5. Start the project:
+
+```bash
+npm run preview
+```
+
+## Author
+
+- Bassel Abo Khabsa
+- GitHub: EN-BAAK
