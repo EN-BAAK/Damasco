@@ -1,12 +1,24 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { getItemFromLocalStorage, highlightActiveLink, setAnimation, setItemToLocalStorage } from './misc/helpers'
 import { useTranslation } from 'react-i18next'
 import Home from './pages/Home'
+import LoadingPage from './layout/LoadingPage'
 
 const App = (): React.JSX.Element => {
   const i18n = useTranslation("global")[1]
+  const [isLoading, setIsLoading] = useState<boolean>(true)
 
   useEffect(() => {
+    console.log('Loading App...');
+    const loadTimeout = setTimeout(() => {
+      setIsLoading(false);
+    }, 1000);
+
+    return () => clearTimeout(loadTimeout);
+  }, []);
+
+  useEffect(() => {
+    console.log("Enter 1")
     let currentLang = getItemFromLocalStorage("lang") || navigator.language
     const supportedLanguages = ["ar", "en", "fr"];
     if (!supportedLanguages.includes(currentLang)) {
@@ -17,9 +29,10 @@ const App = (): React.JSX.Element => {
       i18n.changeLanguage(currentLang)
       setItemToLocalStorage("lang", currentLang)
     }
-  }, [])
+  }, [isLoading])
 
   useEffect(() => {
+    console.log("Enter 2")
     const links = document.querySelectorAll<HTMLAnchorElement>("#header nav ul li a");
     const topBar = document.getElementById("topbar");
     const header = document.getElementById("header");
@@ -47,7 +60,10 @@ const App = (): React.JSX.Element => {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, []);
+  }, [isLoading]);
+
+  if (isLoading)
+    return <LoadingPage />
 
   return (
     <div className={`App ${i18n.language === "ar" && "arabic"} position-relative`}>
