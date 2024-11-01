@@ -19,13 +19,14 @@ const ProductsCard = ({ title, desc, img, animation, animationDelay }: Props): R
       data-ani={animation}
       data-delay={animationDelay}
       className='products-card border-0 overflow-hidden'>
-      <div className="card-img-top overflow-hidden position-relative" onClick={() => showImage(img)}>
+      <div className="card-img-top overflow-hidden position-relative">
         <CompressedImage
           src={img}
           alt={title}
           loading='lazy'
           blurWidth="100%"
           blurHeight="100%"
+          clickEvent={() => showImage(img)}
         />
       </div>
 

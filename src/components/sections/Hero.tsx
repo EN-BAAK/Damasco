@@ -17,7 +17,8 @@ const Hero = (): React.JSX.Element => {
             data-ani={isArabic ? "left" : "right"}
           >
             <div>
-              <h1>{translating("hero.welcome1")} <span>{translating("global.company")}</span> {translating("hero.welcome2")}</h1>
+              <h1 dangerouslySetInnerHTML={{ __html: translating("hero.welcome") }} />
+
               <div id='sub-title' className='fs-4'>
                 <Typewriter
                   options={{
@@ -33,6 +34,7 @@ const Hero = (): React.JSX.Element => {
               </div>
             </div>
           </div>
+
           <div
             className={`col-lg-6 col-12 img-holder`}
             data-ani={isArabic ? "right" : "left"}

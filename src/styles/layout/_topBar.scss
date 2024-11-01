@@ -5,7 +5,7 @@
   top: 0;
   left: 0;
   font-weight: 600;
-  font-size: 12px;
+  font-size: 11px;
   @include prefixer(transition, var(--time-transition));
   z-index: 999;
 

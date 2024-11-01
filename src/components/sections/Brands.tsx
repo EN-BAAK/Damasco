@@ -2,7 +2,9 @@ import React from 'react';
 import { Container } from 'react-bootstrap';
 import HeadingTitle from '../HeadingTitle';
 import { useTranslation } from 'react-i18next';
-import Slider from 'react-slick';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { useAppContext } from '../../context/AppContext';
+import CompressedImage from '../CompressedImage';
 
 import threeM from "../../assets/brands/3M-min.png";
 import accu from "../../assets/brands/accu-min.png";
@@ -21,12 +23,10 @@ import tynor from "../../assets/brands/tynor-min.png";
 import yuwell from "../../assets/brands/yuwell-min.png";
 import glu from "../../assets/brands/glu.png";
 import dura from "../../assets/brands/dura.png";
-import { useAppContext } from '../../context/AppContext';
-import CompressedImage from '../CompressedImage';
 
 const Brands = (): React.JSX.Element => {
   const { t: translating } = useTranslation('global');
-  const { showImage } = useAppContext()
+  const { showImage } = useAppContext();
 
   const brandImages = [
     { id: 1, src: threeM, alt: '3M' },
@@ -47,6 +47,7 @@ const Brands = (): React.JSX.Element => {
     { id: 16, src: glu, alt: 'GLU' },
     { id: 17, src: dura, alt: 'Dura' }
   ];
+
   return (
     <section id="brands">
       <Container>
@@ -55,59 +56,40 @@ const Brands = (): React.JSX.Element => {
           desc={translating('brands.title')}
         />
 
-        <div className="swiper-container">
-          <Slider
-            speed={500}
-            nextArrow={<></>}
-            prevArrow={<></>}
-            initialSlide={0}
-            slidesToShow={7}
-            slidesToScroll={4}
-            infinite={false}
-            responsive={[
-              {
-                breakpoint: 1024,
-                settings: {
-                  slidesToShow: 7,
-                  slidesToScroll: 2,
-                  initialSlide: 7
-                },
-              },
-              {
-                breakpoint: 768,
-                settings: {
-                  slidesToShow: 6,
-                  slidesToScroll: 2,
-                  initialSlide: 6
-                },
-              },
-              {
-                breakpoint: 0,
-                settings: {
-                  slidesToShow: 4,
-                  slidesToScroll: 2,
-                  initialSlide: 4
-                },
-              },
-            ]}>
-            {
-              brandImages.map((brand, index) => (
-                <div key={`brand-img-${brand.id}`}>
-                  <CompressedImage
-                    clickEvent={() => showImage(brand.src)}
-                    animation="bomb"
-                    animationDelay={index * 0.05}
-                    src={brand.src}
-                    alt={brand.alt}
-                    loading='lazy'
-                    blurWidth={85}
-                    blurHeight={85}
-                  />
-                </div>
-              ))
-            }
-          </Slider>
-        </div>
+        <Swiper
+          navigation
+          pagination
+          spaceBetween={10}
+          slidesPerView={7}
+          breakpoints={{
+            1024: {
+              slidesPerView: 7,
+            },
+            768: {
+              slidesPerView: 6,
+            },
+            0: {
+              slidesPerView: 3,
+            },
+          }}
+        >
+          {brandImages.map((brand, index) => (
+            <SwiperSlide key={`brand-img-${brand.id}`}>
+              <div>
+                <CompressedImage
+                  clickEvent={() => showImage(brand.src)}
+                  animation="bomb"
+                  animationDelay={index * 0.05}
+                  src={brand.src}
+                  alt={brand.alt}
+                  loading='lazy'
+                  blurWidth={85}
+                  blurHeight={85}
+                />
+              </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
       </Container>
     </section>
   );

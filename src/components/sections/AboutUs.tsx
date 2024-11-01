@@ -34,18 +34,12 @@ const AboutUs = (): React.JSX.Element => {
               blurHeight={450}
               alt='about-img' />
           </div>
+
           <div
             className={`col-lg-6 col-12 m-0 ${arStyle}`}
             data-ani={isArabic ? "right" : "left"}
           >
-            <p className={`${arStyle}`}>
-              {translating("about.paragraph1")}
-              <span className='sentence'>{translating("about.sentence")}</span>
-              {translating("about.paragraph2")}
-            </p>
-            <p className={`${arStyle}`}>
-              {translating("about.paragraph3")}
-            </p>
+            <p className={arStyle} dangerouslySetInnerHTML={{ __html: translating("about.paragraph") }} />
           </div>
         </Row>
       </Container>

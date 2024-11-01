@@ -5,7 +5,6 @@
   position: relative;
   text-align: center;
 
-
   @include breakpoints(lg) {
     text-align: left;
 
@@ -120,7 +119,7 @@
 
       @include breakpoints(lg) {
         width: 500px;
-        @include animation(floating, 3.5s linear infinite);
+        @include animation(floating, 4.5s linear infinite);
       }
     }
   }

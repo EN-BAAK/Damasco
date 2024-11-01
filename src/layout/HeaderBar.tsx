@@ -66,7 +66,7 @@ const HeaderBar = (): React.JSX.Element => {
 
           <div
             id="bar"
-            className={`d-block d-md-none ${active && "active"}`}
+            className={`d-block d-lg-none ${active && "active"}`}
             onClick={() => setActive(!active)}
           >
             <span className="top"></span>
@@ -75,7 +75,7 @@ const HeaderBar = (): React.JSX.Element => {
           </div>
         </Navbar>
 
-        <div className={`${i18n.language !== 'ar' ? "me-2 me-md-0 ms-2" : "ms-2 ms-md-0 me-2"}`}>
+        <div className={`${i18n.language !== 'ar' ? "me-2 me-lg-0 ms-2" : "ms-2 ms-lg-0 me-2"}`}>
           <LanguageBox />
         </div>
       </Container>

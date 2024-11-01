@@ -58,7 +58,7 @@ header {
           color: var(--c-grey-text);
           @include prefixer(transition, var(--time-transition));
 
-          @include breakpoints(md) {
+          @include breakpoints(lg) {
             background-color: transparent;
           }
 
@@ -70,7 +70,7 @@ header {
         }
       }
 
-      @include breakpoints(md) {
+      @include breakpoints(lg) {
         background-color: transparent;
         box-shadow: none;
         display: flex;

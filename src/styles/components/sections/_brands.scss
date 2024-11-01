@@ -1,9 +1,9 @@
 #brands {
   .container {
-    .slick-track {
-      @include centering;
+    .swiper-wrapper {
+      align-items: center;
 
-      .slick-slide {
+      .swiper-slide {
         @include centering;
 
         img {

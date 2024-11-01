@@ -1,6 +1,5 @@
 import ReactDOM from 'react-dom/client'
 import App from './App.tsx'
-import './index.scss'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import i18next from 'i18next'
 import { I18nextProvider } from 'react-i18next'
@@ -9,6 +8,9 @@ import enLang from "./languages/en.json"
 import frLang from "./languages/fr.json"
 import { StrictMode } from 'react'
 import AppContextProvider from './context/AppContext.tsx'
+
+import 'swiper/css';
+import './index.scss'
 
 i18next.init({
   interpolation: { escapeValue: false },

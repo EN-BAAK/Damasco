@@ -1,6 +1,11 @@
-import React from 'react'
-import HeadingTitle from '../HeadingTitle'
-import { useTranslation } from 'react-i18next'
+import React from 'react';
+import HeadingTitle from '../HeadingTitle';
+import { useTranslation } from 'react-i18next';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Container } from 'react-bootstrap';
+import { useAppContext } from '../../context/AppContext';
+import CompressedImage from '../CompressedImage';
+
 import image from "../../assets/gallery/image-min.png"
 import image1 from "../../assets/gallery/image-1-min.png"
 import image2 from "../../assets/gallery/image-2-min.png"
@@ -11,14 +16,10 @@ import image6 from "../../assets/gallery/image-6-min.png"
 import image7 from "../../assets/gallery/image-7-min.png"
 import image8 from "../../assets/gallery/image-8-min.png"
 import image9 from "../../assets/gallery/image-9-min.png"
-import Slider from 'react-slick'
-import { Container } from 'react-bootstrap'
-import { useAppContext } from '../../context/AppContext'
-import CompressedImage from '../CompressedImage'
 
 const Gallery = (): React.JSX.Element => {
-  const { t: translating } = useTranslation("global")
-  const { showImage } = useAppContext()
+  const { t: translating } = useTranslation('global');
+  const { showImage } = useAppContext();
 
   const images = [
     { id: 1, src: image, alt: 'Image Min' },
@@ -36,67 +37,44 @@ const Gallery = (): React.JSX.Element => {
   return (
     <section id='gallery'>
       <Container>
-        <HeadingTitle title={translating("gallery.title")} />
+        <HeadingTitle title={translating('gallery.title')} />
 
-        <div className="swiper-container">
-          <Slider
-            speed={500}
-            nextArrow={<></>}
-            prevArrow={<></>}
-            initialSlide={0}
-            slidesToShow={5}
-            slidesToScroll={1}
-            infinite={true}
-            responsive={[
-              {
-                breakpoint: 1024,
-                settings: {
-                  slidesToShow: 5,
-                  slidesToScroll: 1,
-                  initialSlide: 5
-                },
-              },
-              {
-                breakpoint: 768,
-                settings: {
-                  slidesToShow: 3,
-                  slidesToScroll: 1,
-                  initialSlide: 3
-                },
-              },
-              {
-                breakpoint: 0,
-                settings: {
-                  slidesToShow: 1,
-                  slidesToScroll: 1,
-                  initialSlide: 1
-                },
-              },
-            ]}>
-            {
-              images.map((img, index) => (
-                <div
-                  className='img-holder position-relative border border-4 border-light-subtle shadow-lg overflow-hidden'
-                  key={`img-${img.id}`}
-                  onClick={() => showImage(img.src)}
-                >
-                  <CompressedImage
-                    animation="bomb"
-                    animationDelay={index * 0.05}
-                    src={img.src}
-                    loading='lazy'
-                    alt={img.alt}
-                    blurWidth={85}
-                    blurHeight={85}
-                  />
-                </div>
-              ))
-            }
-          </Slider>
-        </div>
+        <Swiper
+          navigation
+          pagination
+          spaceBetween={10}
+          slidesPerView={5}
+          breakpoints={{
+            1024: {
+              slidesPerView: 5,
+            },
+            0: {
+              slidesPerView: 3,
+            },
+          }}
+        >
+          {images.map((img, index) => (
+            <SwiperSlide key={`img-${img.id}`}>
+              <div
+                className='img-holder position-relative rounded-4 border border-4 border-light-subtle shadow-lg overflow-hidden'
+              >
+                <CompressedImage
+                  animation='bomb'
+                  animationDelay={index * 0.05}
+                  clickEvent={() => showImage(img.src)}
+                  src={img.src}
+                  loading='lazy'
+                  alt={img.alt}
+                  blurWidth={85}
+                  blurHeight={85}
+                />
+              </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
       </Container>
     </section>
-  )
-}
+  );
+};
 
-export default Gallery
+export default Gallery;
