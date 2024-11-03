@@ -1,4 +1,4 @@
-export const phone = "+963 954 439 592";
+export const phone = "+963 *** *** ***";
 export const langs = [
   { name: "العربية", key: "ar" },
   { name: "english", key: "en" },

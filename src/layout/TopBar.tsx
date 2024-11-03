@@ -21,11 +21,12 @@ const TopBar = (): React.JSX.Element => {
           {translating("topBar.time")}
         </p>
         <p
-          className={`text-white d-flex align-items-center justify-content-between pointer`}
+          className={`text-white d-flex align-items-center justify-content-between`}
           onClick={handleCall}
         >
           <FaMobileScreenButton className={language === "ar" ? "arabic" : ""} />
-          <span>{translating("topBar.calling")}</span>
+          <span className='pointer'>{translating("topBar.calling")}</span>
+          <span className='pointer mx-1'>{translating("topBar.number")}</span>
         </p>
       </div>
     </div>

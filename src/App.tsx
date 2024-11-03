@@ -9,7 +9,6 @@ const App = (): React.JSX.Element => {
   const [isLoading, setIsLoading] = useState<boolean>(true)
 
   useEffect(() => {
-    console.log('Loading App...');
     const loadTimeout = setTimeout(() => {
       setIsLoading(false);
     }, 1000);
@@ -18,7 +17,6 @@ const App = (): React.JSX.Element => {
   }, []);
 
   useEffect(() => {
-    console.log("Enter 1")
     let currentLang = getItemFromLocalStorage("lang") || navigator.language
     const supportedLanguages = ["ar", "en", "fr"];
     if (!supportedLanguages.includes(currentLang)) {
@@ -32,7 +30,6 @@ const App = (): React.JSX.Element => {
   }, [isLoading])
 
   useEffect(() => {
-    console.log("Enter 2")
     const links = document.querySelectorAll<HTMLAnchorElement>("#header nav ul li a");
     const topBar = document.getElementById("topbar");
     const header = document.getElementById("header");

@@ -70,14 +70,26 @@ const Footer = (): React.JSX.Element => {
     {
       id: 2,
       social: translating("footer.contact.social.phone"),
-      link: "+963 09xx xxx xxx"
+      link: "0954439592"
     },
     {
       id: 3,
       social: translating("footer.contact.social.telephone"),
-      link: "88xxxxxx"
+      link: "6632432"
     }
   ]
+
+  const isValidEmail = (email: string) => {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+  }
+
+  const handleLinkClick = (link: string) => {
+    if (!isNaN(Number(link)))
+      window.location.href = `tel:${link}`
+    else if (isValidEmail(link))
+      window.location.href = `mailto:${link}`;
+  }
 
   return (
     <section id='footer' className="bg-light">
@@ -138,7 +150,7 @@ const Footer = (): React.JSX.Element => {
             data-delay="1.2"
             lg={{ span: 4, offset: language === "ar" ? 0 : 1 }}
             md={6}
-            className={`pe-3 p-sm-1 ${language === "ar" ? "text-end" : "text-start"}`}
+            className={`pe-3 p-sm-1 ${language === "ar" ? "text-end" : "text-start"} contact`}
           >
             <h1 className={`mb-3 fw-semibold fs-5`}>{translating("footer.contact.damasco")}</h1>
 
@@ -148,7 +160,10 @@ const Footer = (): React.JSX.Element => {
 
             <ul className='m-0 p-0 contact'>
               {contact.map(contact => <li key={`footer-contact-${contact.id}`}>
-                <p className='fw-semibold'>{contact.social}: <span className='fw-normal'>{contact.link}</span></p>
+                <p className='fw-semibold'>{contact.social}: {""}
+                  <span
+                    className='fw-normal pointer'
+                    onClick={() => handleLinkClick(contact.link)}>{contact.link}</span></p>
               </li>)}
             </ul>
           </Col>

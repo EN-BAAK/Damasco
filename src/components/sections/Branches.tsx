@@ -37,7 +37,7 @@ const Branches = (): React.JSX.Element => {
                         phone={branch.phone}
                         telephone={branch.telephone}
                         side={!(branch.id % 2 === 0) && !(branchGroup.id % 3 === 0)}
-                        animationDelay={(branchGroup.id + branch.id) * 0.12}
+                        animationDelay={(branchGroup.id + branch.id) * 0.1}
                       />
                       <div className="clear" />
                     </React.Fragment>

@@ -73,6 +73,10 @@
     color: var(--c-main);
   }
 
+  .phone {
+    cursor: pointer;
+  }
+
   svg {
     @include set-position(auto, auto, 15px, 20px);
     color: var(--c-main);
